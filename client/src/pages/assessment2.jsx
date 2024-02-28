@@ -1,6 +1,21 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-export default function Assesment2() {
+export default function Assessment2() {
+  const [quesno, setQuesno] = useState(1);
+  const [ques, setQues] = useState("");
+
+  useEffect(() => {
+    const fetchQues  = async () => {
+      const res = await axios.get("http://localhost:5001/api/question/" + quesno);
+      setQues(res.data);
+    }
+    fetchQues();
+  }, [quesno]);
+
+  const nextQuestion = () => setQuesno(quesno + 1);
+
   return (
     <>
       <div className="div">
@@ -31,12 +46,16 @@ export default function Assesment2() {
                         srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&"
                         className="img"
                       />
-                      <div className="div-17">Free</div>
+                      <div className="div-17" onClick={nextQuestion}>Next</div>
                     </div>
-                    <div className="div-18">Question 1</div>
-                    <div className="div-19" />
-                    <div className="div-20" />
-                    <div className="div-21" />
+                    <div className="div-18">Question {quesno}</div>
+                    <div>{ques}</div>
+                    
+                    <div className="div-19"><input type="radio" name="ques" value="1"/>Strongly Agree</div>
+                    <div className="div-19"><input type="radio" name="ques" value="2"/>Agree</div>
+                    <div className="div-19"><input type="radio" name="ques" value="3"/>Neutral</div>
+                    <div className="div-19"><input type="radio" name="ques" value="4"/>Disagree</div>
+                    <div className="div-19"><input type="radio" name="ques" value="5"/>Strongly Disagree</div>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/c177a27d40e14219da4d24a14fc6d2037290728dc8aa8e3e8c45d3799a4e38a9?apiKey=d105f6bd6bb4472bba21449537e0b092&"
@@ -50,7 +69,7 @@ export default function Assesment2() {
                       />
                       <div className="div-23">29 Mb / Sec</div>
                     </div>
-                    <div className="div-24">skip question</div>
+                    <div className="div-24" onClick={nextQuestion}>skip question</div>
                   </div>
                 </div>
               </div>

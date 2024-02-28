@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -10,17 +11,18 @@ export default function Home() {
           className="img"
         />
         <div className="div-2">
-          <div className="div-3">
+          <Link to="/"><div className="div-3">
             Career
             <br />
             Carrier
           </div>
+          </Link>
           <div className="div-4">
-            <div className="div-5">Careers</div>
-            <div className="div-6">About</div>
-            <div className="div-7">Contact</div>
-            <div className="div-8">Help</div>
-            <div className="div-9">Take Test</div>
+            <Link to="/Careers"><div className="div-5">Careers</div></Link>
+            <Link to="/About"><div className="div-6">About</div></Link>
+            <Link to="/ContactUs"><div className="div-7">Contact</div></Link>
+            <Link to="/Help"><div className="div-8">Help</div></Link>
+            <Link to="/Assessment2"><div className="div-9">Take Test</div></Link>
           </div>
           <div className="div-10">Log in/Register</div>
         </div>

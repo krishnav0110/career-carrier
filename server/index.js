@@ -7,6 +7,7 @@ const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const predictRoute = require("./routes/predict");
+const questionRoute = require("./routes/question");
 
 /* setting up the configurations for connection */
 dotenv.config();
@@ -25,6 +26,7 @@ mongoose.connect(process.env.MONGO_URL, {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/predict", predictRoute);
+app.use("/api/question", questionRoute);
 
 /* starting the server */
 app.listen("5001", () => {

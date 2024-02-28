@@ -7,7 +7,6 @@ import Contactus from "./pages/contactus"
 // import Community from "./pages/community"
 // import Feedback from "./pages/feedback"
 import Goals from "./pages/Goals"
-// import Assessment1 from "./pages/assessment1"
 import Assessment2 from "./pages/assessment2"
 import Help from "./pages/help"
 import Inputs from "./pages/inputs"
@@ -18,22 +17,6 @@ import SignUp from "./pages/signup"
 import Team from "./pages/Team";
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -43,7 +26,6 @@ function App() {
         <Route exact path="/ContactUs" element={<Contactus />} />
         {/* <Route exact path="/FeedBack" element={<Feedback />} /> */}
         <Route exact path="/Goals" element={<Goals />} /> 
-        {/* <Route path="/Assessment1" element={<Assessment1 />} /> */}
         <Route path="/Assessment2" element={<Assessment2 />} />
         <Route path="/Help" element={<Help />} />
         <Route path="/Inputs/:id?" element={<Inputs />} />

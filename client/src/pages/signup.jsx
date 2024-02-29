@@ -24,13 +24,13 @@ export default function SignUp( ) {
           </div>
         </div>
         <div className="div-10">CREATE ACCOUNT</div>
+        <div className="div-11">Email Id</div>
+        <div className="div-12">sassy@gmail.com</div>
         <div className="div-11">First Name</div>
         <div className="div-12">sassy</div>
-        <div className="div-13">First Name</div>
-        <div className="div-14">sassy</div>
-        <div className="div-15">Last Name</div>
-        <div className="div-16">sassy</div>
-        <div className="div-17">Create Password</div>
+        <div className="div-11">Last Name</div>
+        <div className="div-12">sassy</div>
+        <div className="div-11">Create Password</div>
         <div className="div-18">
           <img
             loading="lazy"
@@ -43,17 +43,17 @@ export default function SignUp( ) {
             className="img-3"
           />
         </div>
-        <div className="div-19">Confirm Password</div>
-        <div className="div-20">
+        <div className="div-11">Confirm Password</div>
+        <div className="div-18">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cbe6be59fa3300482e2a24087a6898356078c1778248c313044fb50a7c0fdb1?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-4"
+            className="img-2"
           />
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bdcbce7c98eec1908a0b1d58da28cd331c4134dbf5912a89eca1142992bb77b?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-5"
+            className="img-3"
           />
         </div>
         <div className="div-21">Create Account</div>
@@ -65,7 +65,6 @@ export default function SignUp( ) {
           overflow: hidden;
           position: relative;
           display: flex;
-          min-height: 1110px;
           align-items: start;
           padding: 16px 62px 34px;
         }
@@ -77,7 +76,7 @@ export default function SignUp( ) {
         .img {
           position: absolute;
           inset: 0;
-          height: 100%;
+          height: 80%;
           width: 100%;
           object-fit: cover;
           object-position: center;
@@ -146,8 +145,8 @@ export default function SignUp( ) {
           position: relative;
           color: var(--black-2-5, #444b59);
           letter-spacing: 3.6px;
-          margin: 102px 0 0 49px;
-          font: 800 36px Overpass, sans-serif;
+          margin: 30px 0 0 49px;
+          font: 800 18px Overpass, sans-serif;
         }
         @media (max-width: 991px) {
           .div-10 {
@@ -158,8 +157,8 @@ export default function SignUp( ) {
           position: relative;
           color: #444b59;
           letter-spacing: 2.8px;
-          margin: 22px 0 0 49px;
-          font: 600 28px Nunito, sans-serif;
+          margin: 10px 0 0 49px;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-11 {
@@ -172,15 +171,15 @@ export default function SignUp( ) {
           border-radius: 80px;
           border: 2px solid var(--dark-blue-1-8, #789ade);
           background-color: var(--white, #fff);
-          width: 640px;
+          width: 480px;
           max-width: 100%;
           justify-content: center;
           color: var(--blue-1-9, #c8d3f9);
           white-space: nowrap;
           letter-spacing: 2.4px;
-          margin: 16px 0 0 49px;
-          padding: 24px 32px;
-          font: 400 24px Nunito, sans-serif;
+          margin: 10px 0 0 49px;
+          padding: 10px 20px;
+          font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-12 {
@@ -193,7 +192,7 @@ export default function SignUp( ) {
           color: #444b59;
           letter-spacing: 2.8px;
           margin: 16px 0 0 49px;
-          font: 600 28px Nunito, sans-serif;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-13 {
@@ -214,7 +213,7 @@ export default function SignUp( ) {
           letter-spacing: 2.4px;
           margin: 16px 0 0 49px;
           padding: 24px 32px;
-          font: 400 24px Nunito, sans-serif;
+          font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-14 {
@@ -227,7 +226,7 @@ export default function SignUp( ) {
           color: #444b59;
           letter-spacing: 2.8px;
           margin: 16px 0 0 49px;
-          font: 600 28px Nunito, sans-serif;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-15 {
@@ -248,7 +247,7 @@ export default function SignUp( ) {
           letter-spacing: 2.4px;
           margin: 16px 0 0 49px;
           padding: 24px 32px;
-          font: 400 24px Nunito, sans-serif;
+          font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-16 {
@@ -261,7 +260,7 @@ export default function SignUp( ) {
           color: var(--black-2-5, #444b59);
           letter-spacing: 2.8px;
           margin: 16px 0 0 49px;
-          font: 600 28px Nunito, sans-serif;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-17 {
@@ -275,11 +274,11 @@ export default function SignUp( ) {
           border: 2px solid var(--dark-blue-1-8, #789ade);
           background-color: var(--white, #fff);
           display: flex;
-          width: 640px;
+          width: 480px;
           max-width: 100%;
           gap: 20px;
           margin: 16px 0 0 49px;
-          padding: 24px 32px;
+          padding: 10px 20px;
         }
         @media (max-width: 991px) {
           .div-18 {
@@ -291,21 +290,21 @@ export default function SignUp( ) {
           aspect-ratio: 4.17;
           object-fit: auto;
           object-position: center;
-          width: 132px;
+          width: 80px;
           max-width: 100%;
         }
         .img-3 {
           aspect-ratio: 1;
           object-fit: auto;
           object-position: center;
-          width: 32px;
+          width: 20px;
         }
         .div-19 {
           position: relative;
           color: var(--black-2-5, #444b59);
           letter-spacing: 2.8px;
           margin: 16px 0 0 49px;
-          font: 600 28px Nunito, sans-serif;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-19 {
@@ -352,14 +351,14 @@ export default function SignUp( ) {
           box-shadow: 4px 8px 12px 0px rgba(78, 99, 141, 0.06),
             0px 4px 12px 0px rgba(200, 211, 249, 0.6) inset;
           background-color: var(--blue-2-7, #8699da);
-          width: 688px;
+          width: 480px;
           max-width: 100%;
           color: var(--white, #fff);
           white-space: nowrap;
           letter-spacing: 2.8px;
           margin: 43px 0 0 49px;
-          padding: 24px 60px 11px;
-          font: 800 28px Nunito, sans-serif;
+          padding: 10px 20px;
+          font: 800 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-21 {

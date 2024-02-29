@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -25,12 +26,12 @@ export default function Login() {
         </div>
         <div className="div-10">WELCOME BACK!</div>
         <div className="div-11">
-          <span style="font-family: Nunito, sans-serif; color: rgba(68,75,89,1);">
+          <span style={{fontFamily: "Nunito, sans-serif", color: "rgba(68,75,89,1)"}}>
             Don’t have a account,
           </span>{" "}
-          <span style="font-family: Nunito, sans-serif; font-weight: 700; color: rgba(134,153,218,1);">
+          <Link to="/signup"><span style={{fontFamily: "Nunito, sans-serif", fontWeight: 700, color: "rgba(134,153,218,1)"}}>
             Sign up
-          </span>
+          </span></Link>
         </div>
         <div className="div-12">Username</div>
         <div className="div-13">deniel123@gmail.com</div>
@@ -47,17 +48,7 @@ export default function Login() {
             className="img-3"
           />
         </div>
-        <div className="div-16">
-          <div className="div-17">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c03caa0c787080d1d888598a521fafde3391ff9ae0b85ddb08f5df484071251c?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-              className="img-4"
-            />
-            <div className="div-18" />
-          </div>
-          <div className="div-19" />
-        </div>
+        
         <div className="div-20">Sign In</div>
         <div className="div-21">or continue with</div>
         <div className="div-22">
@@ -91,7 +82,7 @@ export default function Login() {
           overflow: hidden;
           position: relative;
           display: flex;
-          min-height: 1110px;
+          // min-height: 1110px;
           align-items: start;
           padding: 9px 80px 50px 24px;
         }
@@ -173,8 +164,8 @@ export default function Login() {
           color: var(--black-2-5, #444b59);
           letter-spacing: 3.6px;
           white-space: nowrap;
-          margin: 134px 0 0 82px;
-          font: 800 36px Overpass, sans-serif;
+          margin: 40px 0 0 82px;
+          font: 800 24px Overpass, sans-serif;
         }
         @media (max-width: 991px) {
           .div-10 {
@@ -187,7 +178,7 @@ export default function Login() {
           color: var(--blue-1-7, #8699da);
           letter-spacing: 2.4px;
           margin: 36px 0 0 82px;
-          font: 400 24px Open Sans, sans-serif;
+          font: 400 18px Open Sans, sans-serif;
         }
         @media (max-width: 991px) {
           .div-11 {
@@ -198,8 +189,8 @@ export default function Login() {
           position: relative;
           color: #444b59;
           letter-spacing: 2.8px;
-          margin: 60px 0 0 82px;
-          font: 600 28px Nunito, sans-serif;
+          margin: 20px 0 0 82px;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-12 {
@@ -213,15 +204,15 @@ export default function Login() {
           border-radius: 80px;
           border: 2px solid var(--dark-blue-1-8, #789ade);
           background-color: var(--white, #fff);
-          width: 640px;
+          width: 480px;
           max-width: 100%;
           justify-content: center;
           color: var(--blue-1-9, #c8d3f9);
           white-space: nowrap;
           letter-spacing: 2.4px;
           margin: 16px 0 0 82px;
-          padding: 24px 32px;
-          font: 400 24px Nunito, sans-serif;
+          padding: 10px 20px;
+          font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-13 {
@@ -234,7 +225,7 @@ export default function Login() {
           color: var(--black-2-5, #444b59);
           letter-spacing: 2.8px;
           margin: 36px 0 0 82px;
-          font: 600 28px Nunito, sans-serif;
+          font: 600 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-14 {
@@ -248,11 +239,11 @@ export default function Login() {
           border: 2px solid var(--dark-blue-1-8, #789ade);
           background-color: var(--white, #fff);
           display: flex;
-          width: 640px;
+          width: 480px;
           max-width: 100%;
           gap: 20px;
           margin: 16px 0 0 82px;
-          padding: 24px 32px;
+          padding: 10px 20px;
         }
         @media (max-width: 991px) {
           .div-15 {
@@ -314,14 +305,14 @@ export default function Login() {
           box-shadow: 4px 8px 12px 0px rgba(78, 99, 141, 0.06),
             0px 4px 12px 0px rgba(200, 211, 249, 0.6) inset;
           background-color: var(--blue-2-7, #8699da);
-          width: 688px;
+          width: 120px;
           max-width: 100%;
           color: var(--white, #fff);
           white-space: nowrap;
           letter-spacing: 2.8px;
           margin: 50px 0 0 82px;
-          padding: 24px 60px 12px;
-          font: 800 28px Nunito, sans-serif;
+          padding: 10px 20px;
+          font: 800 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-20 {
@@ -339,7 +330,7 @@ export default function Login() {
           letter-spacing: 2px;
           margin: 33px 0 0 282px;
           padding: 8px 22px 8px 8px;
-          font: 400 20px Nunito, sans-serif;
+          font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
           .div-21 {
@@ -372,7 +363,7 @@ export default function Login() {
           flex-grow: 1;
           flex-basis: 0%;
           flex-direction: column;
-          padding: 15px 35px 8px;
+          padding: 10px;
         }
         @media (max-width: 991px) {
           .div-23 {
@@ -383,7 +374,7 @@ export default function Login() {
           aspect-ratio: 1;
           object-fit: auto;
           object-position: center;
-          width: 50px;
+          width: 30px;
         }
         .div-24 {
           align-items: center;
@@ -394,7 +385,7 @@ export default function Login() {
           flex-grow: 1;
           flex-basis: 0%;
           justify-content: center;
-          padding: 13px 36px;
+          padding: 10px;
         }
         @media (max-width: 991px) {
           .div-24 {
@@ -405,7 +396,7 @@ export default function Login() {
           aspect-ratio: 1;
           object-fit: auto;
           object-position: center;
-          width: 48px;
+          width: 30px;
         }
         .div-25 {
           justify-content: center;
@@ -416,7 +407,7 @@ export default function Login() {
           display: flex;
           flex-grow: 1;
           flex-basis: 0%;
-          padding: 15px 38px;
+          padding: 10px;
         }
         @media (max-width: 991px) {
           .div-25 {
@@ -427,7 +418,7 @@ export default function Login() {
           aspect-ratio: 1;
           object-fit: auto;
           object-position: center;
-          width: 44px;
+          width: 30px;
         }
       `}</style>
     </>

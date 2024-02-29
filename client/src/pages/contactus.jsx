@@ -1,24 +1,11 @@
 import * as React from "react";
+import Navbar from "../components/Navbar";
 
 export default function contactus() {
   return (
     <>
+      <Navbar />
       <div className="div">
-        <div className="div-2">
-          <div className="div-3">
-            Career
-            <br />
-            Carrier
-          </div>
-          <div className="div-4">
-            <div className="div-5">Careers</div>
-            <div className="div-6">About</div>
-            <div className="div-7">Contact</div>
-            <div className="div-8">Help</div>
-            <div className="div-9">Take Test</div>
-          </div>
-          <div className="div-10">Log in/Register</div>
-        </div>
         <div className="div-11">Contact Us</div>
         <div className="div-12">
           <div className="div-13">
@@ -182,91 +169,6 @@ export default function contactus() {
         }
         @media (max-width: 991px) {
           .div {
-            padding: 0 20px;
-          }
-        }
-        .div-2 {
-          align-self: stretch;
-          display: flex;
-          width: 100%;
-          justify-content: space-between;
-          gap: 20px;
-        }
-        @media (max-width: 991px) {
-          .div-2 {
-            max-width: 100%;
-            margin-right: 7px;
-            flex-wrap: wrap;
-          }
-        }
-        .div-3 {
-          color: var(--Colour-Logo-Primary, #37447e);
-          font-feature-settings: "clig" off, "liga" off;
-          font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        .div-4 {
-          align-self: start;
-          display: flex;
-          margin-top: 11px;
-          justify-content: space-between;
-          gap: 20px;
-          font-size: 14px;
-          color: var(--Colour-Main-Blue-500, #505f98);
-          font-weight: 400;
-          white-space: nowrap;
-          line-height: 171%;
-        }
-        @media (max-width: 991px) {
-          .div-4 {
-            max-width: 100%;
-            flex-wrap: wrap;
-            white-space: initial;
-          }
-        }
-        .div-5 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        .div-6 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-7 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-8 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-9 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        @media (max-width: 991px) {
-          .div-9 {
-            white-space: initial;
-          }
-        }
-        .div-10 {
-          font-feature-settings: "clig" off, "liga" off;
-          border-radius: 2px;
-          background-color: var(--Colour-Main-Blue-800, #111b47);
-          justify-content: center;
-          color: var(--colour-secondary-white-100-general, #fff);
-          text-align: center;
-          margin: auto 0;
-          padding: 8px 40px;
-          font: 500 12px/150% Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-10 {
             padding: 0 20px;
           }
         }

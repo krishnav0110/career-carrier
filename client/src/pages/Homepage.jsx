@@ -1,31 +1,18 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <div className="div">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/b623be7d1fa7531ca343c7c168b2bf5ee46d9ab498b32b3da6d35f47c808a63b?apiKey=d105f6bd6bb4472bba21449537e0b092&"
           className="img"
         />
-        <div className="div-2">
-          <Link to="/"><div className="div-3">
-            Career
-            <br />
-            Carrier
-          </div>
-          </Link>
-          <div className="div-4">
-            <Link to="/Careers"><div className="div-5">Careers</div></Link>
-            <Link to="/About"><div className="div-6">About</div></Link>
-            <Link to="/ContactUs"><div className="div-7">Contact</div></Link>
-            <Link to="/Help"><div className="div-8">Help</div></Link>
-            <Link to="/Assessment2"><div className="div-9">Take Test</div></Link>
-          </div>
-          <div className="div-10">Log in/Register</div>
-        </div>
+        
         <div className="div-11">
           Discover your Top Career matches and why they are right for you
         </div>
@@ -37,8 +24,8 @@ export default function Home() {
           sem. Nulla consequat massa quis enim.
         </div>
         <div className="div-13">
-          <div className="div-14">Start Asessment</div>
-          <div className="div-15">Discover </div>
+          <Link to="/assessment2"><div className="div-14">Start Asessment</div></Link>
+          <Link to="/careers"><div className="div-15">Discover </div></Link>
         </div>
       </div>
       <style jsx>{`
@@ -64,93 +51,6 @@ export default function Home() {
           width: 100%;
           object-fit: cover;
           object-position: center;
-        }
-        .div-2 {
-          position: relative;
-          align-self: stretch;
-          display: flex;
-          margin-right: 11px;
-          width: 100%;
-          justify-content: space-between;
-          gap: 20px;
-        }
-        @media (max-width: 991px) {
-          .div-2 {
-            max-width: 100%;
-            margin-right: 10px;
-            flex-wrap: wrap;
-          }
-        }
-        .div-3 {
-          color: var(--Colour-Logo-Primary, #37447e);
-          font-feature-settings: "clig" off, "liga" off;
-          font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        .div-4 {
-          align-self: start;
-          display: flex;
-          margin-top: 12px;
-          justify-content: space-between;
-          gap: 20px;
-          font-size: 14px;
-          color: var(--Colour-Main-Blue-500, #505f98);
-          font-weight: 400;
-          white-space: nowrap;
-          line-height: 171%;
-        }
-        @media (max-width: 991px) {
-          .div-4 {
-            max-width: 100%;
-            flex-wrap: wrap;
-            white-space: initial;
-          }
-        }
-        .div-5 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        .div-6 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-7 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-8 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-9 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        @media (max-width: 991px) {
-          .div-9 {
-            white-space: initial;
-          }
-        }
-        .div-10 {
-          font-feature-settings: "clig" off, "liga" off;
-          border-radius: 2px;
-          background-color: var(--Colour-Main-Blue-800, #111b47);
-          justify-content: center;
-          color: var(--colour-secondary-white-100-general, #fff);
-          text-align: center;
-          margin: auto 0;
-          padding: 7px 40px;
-          font: 500 12px/150% Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-10 {
-            padding: 0 20px;
-          }
         }
         .div-11 {
           position: relative;

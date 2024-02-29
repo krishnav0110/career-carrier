@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 
 export default function Assessment2() {
   const [quesno, setQuesno] = useState(1);
@@ -18,22 +20,9 @@ export default function Assessment2() {
 
   return (
     <>
+      <Navbar />
       <div className="div">
         <div className="div-2">
-          <div className="div-3">
-            <div className="div-4">
-              Career
-              <br />
-              Carrier
-            </div>
-            <div className="div-5">
-              <div className="div-6">Careers</div>
-              <div className="div-7">About</div>
-              <div className="div-8">Contact</div>
-              <div className="div-9">Help</div>
-              <div className="div-10">Take Test</div>
-            </div>
-          </div>
           <div className="div-11">
             <div className="div-12">
               <div className="column">
@@ -101,73 +90,6 @@ export default function Assessment2() {
           .div-2 {
             max-width: 100%;
             padding: 0 20px;
-          }
-        }
-        .div-3 {
-          display: flex;
-          width: 579px;
-          max-width: 100%;
-          justify-content: space-between;
-          gap: 20px;
-          white-space: nowrap;
-        }
-        @media (max-width: 991px) {
-          .div-3 {
-            flex-wrap: wrap;
-            white-space: initial;
-          }
-        }
-        .div-4 {
-          color: var(--Colour-Logo-Primary, #37447e);
-          font-feature-settings: "clig" off, "liga" off;
-          font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        .div-5 {
-          align-self: start;
-          display: flex;
-          margin-top: 12px;
-          justify-content: space-between;
-          gap: 20px;
-          font-size: 14px;
-          color: var(--Colour-Main-Blue-500, #505f98);
-          font-weight: 400;
-          line-height: 171%;
-        }
-        @media (max-width: 991px) {
-          .div-5 {
-            max-width: 100%;
-            flex-wrap: wrap;
-            white-space: initial;
-          }
-        }
-        .div-6 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        .div-7 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-8 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-9 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-10 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        @media (max-width: 991px) {
-          .div-10 {
-            white-space: initial;
           }
         }
         .div-11 {

@@ -1,29 +1,39 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useRef, useContext } from "react";
+import { Context } from "../context/Context";
+import Navbar from "../components/Navbar";
 
 export default function Login() {
+  const userRef = useRef();
+  const passwordRef = useRef();
+  const { dispatch, isFetching } = useContext(Context);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch({type: "LOGIN_START"});
+    try {
+      const res = await axios.post("http://localhost:5001/api/auth/login", {
+        email: userRef.current.value,
+        password: passwordRef.current.value,
+      });
+      dispatch({type: "LOGIN_SUCCESS", payload: res.data});
+      window.location.replace("/");
+    } catch {
+      dispatch({type: "LOGIN_FAILURE"});
+    }
+  };
+
   return (
     <>
+      <Navbar />
       <div className="div">
         <img
           loading="lazy"
           srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/878d5a6a7b6444915e9cdc7464a5742e58ec406a5ac1ca1ab0d4184477d7b929?apiKey=d105f6bd6bb4472bba21449537e0b092&"
           className="img"
         />
-        <div className="div-2">
-          <div className="div-3">
-            Career
-            <br />
-            Carrier
-          </div>
-          <div className="div-4">
-            <div className="div-5">Careers</div>
-            <div className="div-6">About</div>
-            <div className="div-7">Contact</div>
-            <div className="div-8">Help</div>
-            <div className="div-9">Take Test</div>
-          </div>
-        </div>
         <div className="div-10">WELCOME BACK!</div>
         <div className="div-11">
           <span style={{fontFamily: "Nunito, sans-serif", color: "rgba(68,75,89,1)"}}>
@@ -33,23 +43,18 @@ export default function Login() {
             Sign up
           </span></Link>
         </div>
-        <div className="div-12">Username</div>
-        <div className="div-13">deniel123@gmail.com</div>
-        <div className="div-14">Password</div>
-        <div className="div-15">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ea97a141cac90cbdfa7df9b8c132733949506f838895aef9fdf894cf7a4fe32?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-2"
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <div className="div-12">Username</div>
+          <input className="div-13" type="text" placeholder="sassy@gmail.com"
+            ref={userRef}
           />
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9dd5e2e735e2811a259637131f85864e86762c6447718aa916162656b7155a1a?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-3"
+          <div className="div-12">Password</div>
+          <input className="div-13" type="password" placeholder="********"
+            ref={passwordRef}
           />
-        </div>
-        
-        <div className="div-20">Sign In</div>
+          <button className="div-20" type="submit" disabled={isFetching}>Sign In</button>
+        </form>
+      
         <div className="div-21">or continue with</div>
         <div className="div-22">
           <div className="div-23">
@@ -59,23 +64,27 @@ export default function Login() {
               className="img-5"
             />
           </div>
-          <div className="div-24">
+          <div className="div-23">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/e0390edf078cfd566f679232592eef440b564683be2e3cf42aab73c93f5eecbd?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-              className="img-6"
+              className="img-5"
             />
           </div>
-          <div className="div-25">
+          <div className="div-23">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/414c208105a4bd66b6c133d3a37a8fe63899ec15a69b98c03413c6d160795bb9?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-              className="img-7"
+              className="img-5"
             />
           </div>
         </div>
       </div>
       <style jsx>{`
+        .loginForm {
+          display: flex;
+          flex-direction: column;
+        }
         .div {
           disply: flex;
           flex-direction: column;
@@ -99,72 +108,12 @@ export default function Login() {
           object-fit: cover;
           object-position: center;
         }
-        .div-2 {
-          position: relative;
-          display: flex;
-          width: 770px;
-          max-width: 100%;
-          justify-content: space-between;
-          gap: 20px;
-        }
-        @media (max-width: 991px) {
-          .div-2 {
-            flex-wrap: wrap;
-          }
-        }
-        .div-3 {
-          color: var(--Colour-Logo-Primary, #37447e);
-          font-feature-settings: "clig" off, "liga" off;
-          font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        .div-4 {
-          align-self: start;
-          display: flex;
-          margin-top: 12px;
-          justify-content: space-between;
-          gap: 20px;
-          font-size: 14px;
-          color: var(--Colour-Main-Blue-500, #505f98);
-          font-weight: 400;
-          line-height: 171%;
-        }
-        @media (max-width: 991px) {
-          .div-4 {
-            max-width: 100%;
-            flex-wrap: wrap;
-          }
-        }
-        .div-5 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-6 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-7 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-8 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-9 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-          flex-basis: auto;
-        }
         .div-10 {
           position: relative;
           color: var(--black-2-5, #444b59);
           letter-spacing: 3.6px;
           white-space: nowrap;
-          margin: 40px 0 0 82px;
+          margin: 100px 0 0 82px;
           font: 800 24px Overpass, sans-serif;
         }
         @media (max-width: 991px) {
@@ -207,11 +156,10 @@ export default function Login() {
           width: 480px;
           max-width: 100%;
           justify-content: center;
-          color: var(--blue-1-9, #c8d3f9);
           white-space: nowrap;
           letter-spacing: 2.4px;
-          margin: 16px 0 0 82px;
-          padding: 10px 20px;
+          margin: 10px 0 0 82px;
+          padding: 8px 20px;
           font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
@@ -219,83 +167,6 @@ export default function Login() {
             white-space: initial;
             padding: 0 20px;
           }
-        }
-        .div-14 {
-          position: relative;
-          color: var(--black-2-5, #444b59);
-          letter-spacing: 2.8px;
-          margin: 36px 0 0 82px;
-          font: 600 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-14 {
-            max-width: 100%;
-          }
-        }
-        .div-15 {
-          position: relative;
-          justify-content: space-between;
-          border-radius: 80px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: var(--white, #fff);
-          display: flex;
-          width: 480px;
-          max-width: 100%;
-          gap: 20px;
-          margin: 16px 0 0 82px;
-          padding: 10px 20px;
-        }
-        @media (max-width: 991px) {
-          .div-15 {
-            flex-wrap: wrap;
-            padding: 0 20px;
-          }
-        }
-        .img-2 {
-          aspect-ratio: 4.17;
-          object-fit: auto;
-          object-position: center;
-          width: 132px;
-          max-width: 100%;
-        }
-        .img-3 {
-          aspect-ratio: 1;
-          object-fit: auto;
-          object-position: center;
-          width: 32px;
-        }
-        .div-16 {
-          position: relative;
-          justify-content: space-between;
-          display: flex;
-          width: 640px;
-          max-width: 100%;
-          gap: 20px;
-          margin: 36px 0 0 82px;
-        }
-        @media (max-width: 991px) {
-          .div-16 {
-            flex-wrap: wrap;
-          }
-        }
-        .div-17 {
-          display: flex;
-          justify-content: space-between;
-          gap: 16px;
-        }
-        .img-4 {
-          aspect-ratio: 3.03;
-          object-fit: auto;
-          object-position: center;
-          width: 48px;
-        }
-        .div-18 {
-          width: 191px;
-          height: 16px;
-        }
-        .div-19 {
-          width: 190px;
-          height: 16px;
         }
         .div-20 {
           position: relative;
@@ -305,12 +176,12 @@ export default function Login() {
           box-shadow: 4px 8px 12px 0px rgba(78, 99, 141, 0.06),
             0px 4px 12px 0px rgba(200, 211, 249, 0.6) inset;
           background-color: var(--blue-2-7, #8699da);
-          width: 120px;
+          width: 150px;
           max-width: 100%;
           color: var(--white, #fff);
           white-space: nowrap;
           letter-spacing: 2.8px;
-          margin: 50px 0 0 82px;
+          margin: 30px 0 0 82px;
           padding: 10px 20px;
           font: 800 18px Nunito, sans-serif;
         }
@@ -328,7 +199,7 @@ export default function Login() {
           color: var(--black-2-5, #444b59);
           white-space: nowrap;
           letter-spacing: 2px;
-          margin: 33px 0 0 282px;
+          margin: 10px 0 0 282px;
           padding: 8px 22px 8px 8px;
           font: 400 18px Nunito, sans-serif;
         }
@@ -371,50 +242,6 @@ export default function Login() {
           }
         }
         .img-5 {
-          aspect-ratio: 1;
-          object-fit: auto;
-          object-position: center;
-          width: 30px;
-        }
-        .div-24 {
-          align-items: center;
-          border-radius: 8px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: #fff;
-          display: flex;
-          flex-grow: 1;
-          flex-basis: 0%;
-          justify-content: center;
-          padding: 10px;
-        }
-        @media (max-width: 991px) {
-          .div-24 {
-            padding: 0 20px;
-          }
-        }
-        .img-6 {
-          aspect-ratio: 1;
-          object-fit: auto;
-          object-position: center;
-          width: 30px;
-        }
-        .div-25 {
-          justify-content: center;
-          align-items: center;
-          border-radius: 8px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: var(--white, #fff);
-          display: flex;
-          flex-grow: 1;
-          flex-basis: 0%;
-          padding: 10px;
-        }
-        @media (max-width: 991px) {
-          .div-25 {
-            padding: 0 20px;
-          }
-        }
-        .img-7 {
           aspect-ratio: 1;
           object-fit: auto;
           object-position: center;

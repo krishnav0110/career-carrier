@@ -1,7 +1,15 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../context/Context";
 
 export default function Navbar() {
+  const { user, dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({type: "LOGOUT"});
+  }
+
   return (
     <>
       <div className="navbar-con">
@@ -18,7 +26,12 @@ export default function Navbar() {
           <Link to="/Help"><div className="navbar-link">Help</div></Link>
           <Link to="/Assessment2"><div className="navbar-link">Take Test</div></Link>
         </div>
-        <Link to="/Login"><div className="navbar-login">Log in/Register</div></Link>
+        {user ? (
+          <button className="navbar-login" onClick={handleLogout}>Logout</button>
+        ) : (
+          <Link to="/Login"><div className="navbar-login">Log in/Register</div></Link>
+        )}
+        
       </div>
       <style jsx>{`
         a {
@@ -43,6 +56,7 @@ export default function Navbar() {
           }
         }
         .navbar-logo {
+          margin: 10px;
           color: var(--Colour-Logo-Primary, #37447e);
           font-feature-settings: "clig" off, "liga" off;
           font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,
@@ -71,6 +85,7 @@ export default function Navbar() {
           font-feature-settings: "clig" off, "liga" off;
           font-family: Roboto, sans-serif;
           flex-grow: 1;
+          color: var(--Colour-Logo-Primary, #37447e);
         }
         .navbar-login {
           font-feature-settings: "clig" off, "liga" off;
@@ -79,7 +94,7 @@ export default function Navbar() {
           justify-content: center;
           color: var(--colour-secondary-white-100-general, #fff);
           text-align: center;
-          margin: auto 0;
+          margin: 20px 10px;
           padding: 7px 40px;
           font: 500 12px/150% Roboto, -apple-system, Roboto, Helvetica,
             sans-serif;

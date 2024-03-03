@@ -15,7 +15,12 @@ import Matched from "./pages/Matched"
 import Results from "./pages/results"
 import SignUp from "./pages/signup"
 import Team from "./pages/Team";
+import { useContext } from "react";
+import { Context } from "./context/Context";
+
 function App() {
+  const { user } = useContext(Context);
+
   return (
     <Router>
       <Routes>
@@ -26,14 +31,14 @@ function App() {
         <Route exact path="/ContactUs" element={<Contactus />} />
         {/* <Route exact path="/FeedBack" element={<Feedback />} /> */}
         <Route exact path="/Goals" element={<Goals />} /> 
-        <Route path="/Assessment2" element={<Assessment2 />} />
+        <Route path="/Assessment2" element={user ? <Assessment2 /> : <Login />} />
         <Route path="/Help" element={<Help />} />
         <Route path="/Inputs/:id?" element={<Inputs />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/SignUp" element={user ? <Home /> : <SignUp />} />
         <Route path="/Team" element={<Team />} />
         <Route path="/matched" element={<Matched />} />
         <Route path="/Results" element={<Results />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={user ? <Home /> : <Login />} />
 
 </Routes>
     </Router>

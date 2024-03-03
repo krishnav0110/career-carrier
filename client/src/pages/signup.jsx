@@ -1,6 +1,35 @@
 import * as React from "react";
+import { useState } from "react";
+import axios from "axios";
 
 export default function SignUp( ) {
+  const [email, setEmail] = useState("");
+  const [firstName, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e) => {
+    setError(false);
+    e.preventDefault();
+    if(password !== confirmPass) {
+      setError(true);
+      return;
+    }
+    try {
+      const res = await axios.post("http://localhost:5001/api/auth/register", {
+        email,
+        password,
+        firstName,
+        lastName
+      });
+      res.data && window.location.replace("/login");
+    } catch(err) {
+      setError(true);
+    }
+  };
+
   return (
     <>
       <div className="div">
@@ -23,42 +52,37 @@ export default function SignUp( ) {
             <div className="div-9">Take Test</div>
           </div>
         </div>
-        <div className="div-10">CREATE ACCOUNT</div>
-        <div className="div-11">Email Id</div>
-        <div className="div-12">sassy@gmail.com</div>
-        <div className="div-11">First Name</div>
-        <div className="div-12">sassy</div>
-        <div className="div-11">Last Name</div>
-        <div className="div-12">sassy</div>
-        <div className="div-11">Create Password</div>
-        <div className="div-18">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cbe6be59fa3300482e2a24087a6898356078c1778248c313044fb50a7c0fdb1?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-2"
+        <form className="signupform" onSubmit={handleSubmit}>
+          <div className="div-10">CREATE ACCOUNT</div>
+          <div className="div-11">Email Id</div>
+          <input className="div-12" type="text" placeholder="sassy@gmail.com"
+            onChange={e => setEmail(e.target.value)}
           />
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bdcbce7c98eec1908a0b1d58da28cd331c4134dbf5912a89eca1142992bb77b?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-3"
+          <div className="div-11">First Name</div>
+          <input className="div-12" type="text" placeholder="Sassy"
+            onChange={e => setName(e.target.value)}
           />
-        </div>
-        <div className="div-11">Confirm Password</div>
-        <div className="div-18">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cbe6be59fa3300482e2a24087a6898356078c1778248c313044fb50a7c0fdb1?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-2"
+          <div className="div-11">Last Name</div>
+          <input className="div-12" type="text" placeholder="Sassy"
+            onChange={e => setLastName(e.target.value)}
           />
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bdcbce7c98eec1908a0b1d58da28cd331c4134dbf5912a89eca1142992bb77b?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-            className="img-3"
+          <div className="div-11">Create Password</div>
+          <input className="div-12" type="password" placeholder="********"
+            onChange={e => setPass(e.target.value)}
           />
-        </div>
-        <div className="div-21">Create Account</div>
+          <div className="div-11">Confirm Password</div>
+          <input className="div-12" type="password" placeholder="********"
+            onChange={e => setConfirmPass(e.target.value)}
+          />
+          <button className="div-21">Create Account</button>
+          {error && <span style={{color:"red", marginTop:"5px"}}>Something went wrong!</span>}
+        </form>
       </div>
       <style jsx>{`
+        .signupform {
+          display: flex;
+          flex-direction: column;
+        }
         .div {
           disply: flex;
           flex-direction: column;
@@ -174,11 +198,10 @@ export default function SignUp( ) {
           width: 480px;
           max-width: 100%;
           justify-content: center;
-          color: var(--blue-1-9, #c8d3f9);
           white-space: nowrap;
           letter-spacing: 2.4px;
-          margin: 10px 0 0 49px;
-          padding: 10px 20px;
+          margin: 5px 0 0 49px;
+          padding: 8px 20px;
           font: 400 18px Nunito, sans-serif;
         }
         @media (max-width: 991px) {
@@ -186,162 +209,6 @@ export default function SignUp( ) {
             white-space: initial;
             padding: 0 20px;
           }
-        }
-        .div-13 {
-          position: relative;
-          color: #444b59;
-          letter-spacing: 2.8px;
-          margin: 16px 0 0 49px;
-          font: 600 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-13 {
-            max-width: 100%;
-          }
-        }
-        .div-14 {
-          position: relative;
-          align-items: start;
-          border-radius: 80px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: var(--white, #fff);
-          width: 640px;
-          max-width: 100%;
-          justify-content: center;
-          color: var(--blue-1-9, #c8d3f9);
-          white-space: nowrap;
-          letter-spacing: 2.4px;
-          margin: 16px 0 0 49px;
-          padding: 24px 32px;
-          font: 400 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-14 {
-            white-space: initial;
-            padding: 0 20px;
-          }
-        }
-        .div-15 {
-          position: relative;
-          color: #444b59;
-          letter-spacing: 2.8px;
-          margin: 16px 0 0 49px;
-          font: 600 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-15 {
-            max-width: 100%;
-          }
-        }
-        .div-16 {
-          position: relative;
-          align-items: start;
-          border-radius: 80px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: var(--white, #fff);
-          width: 640px;
-          max-width: 100%;
-          justify-content: center;
-          color: var(--blue-1-9, #c8d3f9);
-          white-space: nowrap;
-          letter-spacing: 2.4px;
-          margin: 16px 0 0 49px;
-          padding: 24px 32px;
-          font: 400 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-16 {
-            white-space: initial;
-            padding: 0 20px;
-          }
-        }
-        .div-17 {
-          position: relative;
-          color: var(--black-2-5, #444b59);
-          letter-spacing: 2.8px;
-          margin: 16px 0 0 49px;
-          font: 600 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-17 {
-            max-width: 100%;
-          }
-        }
-        .div-18 {
-          position: relative;
-          justify-content: space-between;
-          border-radius: 80px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: var(--white, #fff);
-          display: flex;
-          width: 480px;
-          max-width: 100%;
-          gap: 20px;
-          margin: 16px 0 0 49px;
-          padding: 10px 20px;
-        }
-        @media (max-width: 991px) {
-          .div-18 {
-            flex-wrap: wrap;
-            padding: 0 20px;
-          }
-        }
-        .img-2 {
-          aspect-ratio: 4.17;
-          object-fit: auto;
-          object-position: center;
-          width: 80px;
-          max-width: 100%;
-        }
-        .img-3 {
-          aspect-ratio: 1;
-          object-fit: auto;
-          object-position: center;
-          width: 20px;
-        }
-        .div-19 {
-          position: relative;
-          color: var(--black-2-5, #444b59);
-          letter-spacing: 2.8px;
-          margin: 16px 0 0 49px;
-          font: 600 18px Nunito, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-19 {
-            max-width: 100%;
-          }
-        }
-        .div-20 {
-          position: relative;
-          justify-content: space-between;
-          border-radius: 80px;
-          border: 2px solid var(--dark-blue-1-8, #789ade);
-          background-color: var(--white, #fff);
-          display: flex;
-          width: 640px;
-          max-width: 100%;
-          gap: 20px;
-          margin: 16px 0 0 49px;
-          padding: 24px 32px;
-        }
-        @media (max-width: 991px) {
-          .div-20 {
-            flex-wrap: wrap;
-            padding: 0 20px;
-          }
-        }
-        .img-4 {
-          aspect-ratio: 4.17;
-          object-fit: auto;
-          object-position: center;
-          width: 132px;
-          max-width: 100%;
-        }
-        .img-5 {
-          aspect-ratio: 1;
-          object-fit: auto;
-          object-position: center;
-          width: 32px;
         }
         .div-21 {
           position: relative;

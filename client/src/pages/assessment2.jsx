@@ -1,12 +1,12 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
 export default function Assessment2() {
   const [quesno, setQuesno] = useState(1);
   const [ques, setQues] = useState("");
+  const [quesFade, setQuesFade] = useState(false);
 
   useEffect(() => {
     const fetchQues  = async () => {
@@ -16,7 +16,10 @@ export default function Assessment2() {
     fetchQues();
   }, [quesno]);
 
-  const nextQuestion = () => setQuesno(quesno + 1);
+  const nextQuestion = () => {
+    setQuesFade(true);
+    setQuesno(quesno + 1);
+  };
 
   return (
     <>
@@ -26,8 +29,12 @@ export default function Assessment2() {
           <div className="div-11">
             <div className="div-12">
               <div className="column">
-                <div className="div-13">
-                  <div className="div-14">Assesment</div>
+                <div className="div-14">Assesment</div>
+                <div 
+                  className={quesFade ? "div-13 fade" : "div-13"} 
+                  onAnimationEnd={() => setQuesFade(false)}
+                  style={{pointerEvents: quesFade ? 'none' : 'auto'}}
+                >
                   <div className="div-15">
                     <div className="div-16">
                       <img
@@ -35,29 +42,28 @@ export default function Assessment2() {
                         srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b2da68832ab11719659a7465aae46471c83f198b96cccbe767d4347746f356d?apiKey=d105f6bd6bb4472bba21449537e0b092&"
                         className="img"
                       />
-                      <div className="div-17" onClick={nextQuestion}>Next</div>
                     </div>
                     <div className="div-18">Question {quesno}</div>
                     <div>{ques}</div>
                     
-                    <div className="div-19"><input type="radio" name="ques" value="1"/>Strongly Agree</div>
-                    <div className="div-19"><input type="radio" name="ques" value="2"/>Agree</div>
-                    <div className="div-19"><input type="radio" name="ques" value="3"/>Neutral</div>
-                    <div className="div-19"><input type="radio" name="ques" value="4"/>Disagree</div>
-                    <div className="div-19"><input type="radio" name="ques" value="5"/>Strongly Disagree</div>
+                    <button className="div-19" onClick={nextQuestion} value="1">Strongly Agree</button>
+                    <button className="div-19" onClick={nextQuestion} value="2">Agree</button>
+                    <button className="div-19" onClick={nextQuestion} value="3">Neutral</button>
+                    <button className="div-19" onClick={nextQuestion} value="4">Disagree</button>
+                    <button className="div-19" onClick={nextQuestion} value="5">Strongly Disagree</button>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/c177a27d40e14219da4d24a14fc6d2037290728dc8aa8e3e8c45d3799a4e38a9?apiKey=d105f6bd6bb4472bba21449537e0b092&"
                       className="img-2"
                     />
-                    <div className="div-22">
+                    {/* <div className="div-22">
                       <img
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac2ae116ebea0d47585bfc4c9e8a7a36015dbeb78571af39fb5796767bd77e22?apiKey=d105f6bd6bb4472bba21449537e0b092&"
                         className="img-3"
                       />
                       <div className="div-23">29 Mb / Sec</div>
-                    </div>
+                    </div> */}
                     <div className="div-24" onClick={nextQuestion}>skip question</div>
                   </div>
                 </div>
@@ -74,10 +80,18 @@ export default function Assessment2() {
         </div>
       </div>
       <style jsx>{`
+        .fade {
+          animation: fade-in-keyframes 1s;
+        }
+        @keyframes fade-in-keyframes {
+          from {opacity: 0}
+          to {opacity: 1}
+        }
         .div {
           justify-content: center;
           display: flex;
           flex-direction: column;
+          overflow: hidden;
         }
         .div-2 {
           background-color: #fff;
@@ -96,7 +110,7 @@ export default function Assessment2() {
           align-self: center;
           width: 100%;
           max-width: 1316px;
-          margin: 214px 0 155px;
+          margin: 100px 0 0;
         }
         @media (max-width: 991px) {
           .div-11 {
@@ -119,7 +133,7 @@ export default function Assessment2() {
           display: flex;
           flex-direction: column;
           line-height: normal;
-          width: 37%;
+          width: 50%;
           margin-left: 0px;
         }
         @media (max-width: 991px) {
@@ -129,17 +143,16 @@ export default function Assessment2() {
         }
         .div-13 {
           display: flex;
-          margin-top: 26px;
           flex-grow: 1;
           flex-direction: column;
         }
         @media (max-width: 991px) {
           .div-13 {
             max-width: 100%;
-            margin-top: 40px;
           }
         }
         .div-14 {
+          margin-top: 26px;
           color: var(--Colour-Main-Blue-900, #091133);
           font-feature-settings: "clig" off, "liga" off;
           font: 500 36px/133% Roboto, -apple-system, Roboto, Helvetica,
@@ -148,6 +161,7 @@ export default function Assessment2() {
         @media (max-width: 991px) {
           .div-14 {
             max-width: 100%;
+            margin-top: 40px;
           }
         }
         .div-15 {
@@ -155,11 +169,11 @@ export default function Assessment2() {
           border-radius: 28.389px;
           background-color: #fff;
           display: flex;
-          margin-top: 32px;
+          margin-top: 5px;
           flex-direction: column;
           font-size: 17px;
           font-weight: 400;
-          padding: 43px;
+          padding: 15px 43px;
         }
         @media (max-width: 991px) {
           .div-15 {
@@ -206,8 +220,15 @@ export default function Assessment2() {
         }
         .div-19 {
           background-color: #d9d9d9;
-          margin-top: 22px;
-          height: 30px;
+          margin-top: 15px;
+          font: 500 18px Roboto, sans-serif;
+          padding: 10px;
+          border-radius: 10px;
+          transition: 0.3s;
+        }
+        .div-19:hover {
+          background-color: #696969;
+          color: white;
         }
         .div-20 {
           background-color: #d9d9d9;
@@ -259,7 +280,7 @@ export default function Assessment2() {
           display: flex;
           flex-direction: column;
           line-height: normal;
-          width: 63%;
+          width: 50%;
           margin-left: 20px;
         }
         @media (max-width: 991px) {

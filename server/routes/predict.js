@@ -18,8 +18,8 @@ router.post("/", async (req, res) => {
                 res.status(501).json(error);
                 return;
             }
-            const predictedResult = response;
-            res.status(200).json(predictedResult);
+            const predictedResult = JSON.parse(response.body);
+            res.status(200).json(predictedResult.careers);
         });
     } catch (err) {
         res.status(500).json(err);

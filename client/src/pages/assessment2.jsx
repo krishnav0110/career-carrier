@@ -1,12 +1,16 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
 export default function Assessment2() {
+  const navigate = useNavigate()
   const [quesno, setQuesno] = useState(1);
   const [ques, setQues] = useState("");
   const [quesFade, setQuesFade] = useState(false);
+  const [responses, setResponses] = useState([]);
+  const maxBatchQuesCount = 17;
 
   useEffect(() => {
     const fetchQues  = async () => {
@@ -16,14 +20,25 @@ export default function Assessment2() {
     fetchQues();
   }, [quesno]);
 
-  const nextQuestion = () => {
-    setQuesFade(true);
-    setQuesno(quesno + 1);
+  const nextQuestion = response => () => {
+    setResponses(prevResponses => {
+      return [...prevResponses, response];
+    });
+    if(quesno > maxBatchQuesCount) {
+      navigate('/results', {state: responses});
+    }
+    else {
+      setQuesFade(true);
+      setQuesno(quesno + 1);
+    }
   };
 
   return (
     <>
       <Navbar />
+      <div className="timer-con">
+        <div className="timer"></div>
+      </div>
       <div className="div">
         <div className="div-2">
           <div className="div-11">
@@ -46,25 +61,20 @@ export default function Assessment2() {
                     <div className="div-18">Question {quesno}</div>
                     <div>{ques}</div>
                     
-                    <button className="div-19" onClick={nextQuestion} value="1">Strongly Agree</button>
-                    <button className="div-19" onClick={nextQuestion} value="2">Agree</button>
-                    <button className="div-19" onClick={nextQuestion} value="3">Neutral</button>
-                    <button className="div-19" onClick={nextQuestion} value="4">Disagree</button>
-                    <button className="div-19" onClick={nextQuestion} value="5">Strongly Disagree</button>
+                    <button className="div-19" onClick={nextQuestion(1)}>Not Interested</button>
+                    <button className="div-19" onClick={nextQuestion(2)}>Poor</button>
+                    <button className="div-19" onClick={nextQuestion(3)}>Beginner</button>
+                    <button className="div-19" onClick={nextQuestion(4)}>Average</button>
+                    <button className="div-19" onClick={nextQuestion(5)}>Intermediate</button>
+                    <button className="div-19" onClick={nextQuestion(7)}>Excellent</button>
+                    <button className="div-19" onClick={nextQuestion(9)}>Professional</button>
+                    
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/c177a27d40e14219da4d24a14fc6d2037290728dc8aa8e3e8c45d3799a4e38a9?apiKey=d105f6bd6bb4472bba21449537e0b092&"
                       className="img-2"
                     />
-                    {/* <div className="div-22">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac2ae116ebea0d47585bfc4c9e8a7a36015dbeb78571af39fb5796767bd77e22?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-                        className="img-3"
-                      />
-                      <div className="div-23">29 Mb / Sec</div>
-                    </div> */}
-                    <div className="div-24" onClick={nextQuestion}>skip question</div>
+                    <div className="div-24" onClick={nextQuestion(1)}>skip question</div>
                   </div>
                 </div>
               </div>
@@ -80,6 +90,22 @@ export default function Assessment2() {
         </div>
       </div>
       <style jsx>{`
+        .timer-con {
+          background-color: #898989;
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          height: 15px;
+        }
+        .timer {
+          background: linear-gradient(90deg, #111b47, #999999, #111b47);
+          border-radius: 15px;
+          position: relative;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 60%;
+          height: 100%;
+        }
         .fade {
           animation: fade-in-keyframes 1s;
         }

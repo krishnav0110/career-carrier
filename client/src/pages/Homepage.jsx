@@ -14,14 +14,12 @@ export default function Home() {
         />
         
         <div className="div-11">
-          Discover your Top Career matches and why they are right for you
+          Navigate Your Future: Your Path to Success Starts Here
         </div>
         <div className="div-12">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus <br />
-          mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-          sem. Nulla consequat massa quis enim.
+          From exploration to achievement, we provide the compass you need to navigate through 
+          the ever-evolving landscape of professional opportunities. Let's ignite your potential 
+          and set sail towards your dream career.
         </div>
         <div className="div-13">
           <Link to="/assessment2"><div className="div-14">Start Asessment</div></Link>

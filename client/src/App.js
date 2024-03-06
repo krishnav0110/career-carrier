@@ -37,7 +37,7 @@ function App() {
         <Route path="/SignUp" element={user ? <Home /> : <SignUp />} />
         <Route path="/Team" element={<Team />} />
         <Route path="/matched" element={<Matched />} />
-        <Route path="/Results" element={<Results />} />
+        <Route path="/Results" element={user ? <Results /> : <Login />} />
         <Route path="/Login" element={user ? <Home /> : <Login />} />
 
 </Routes>

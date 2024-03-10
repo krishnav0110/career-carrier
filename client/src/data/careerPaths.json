@@ -7,5 +7,14 @@
             "Try to Volunteer and Freelance",
             "Create a Portfolio"
         ]
+    },
+    "Actor": {
+        "desc": "Acting is acting bruh...",
+        "path": [
+            "10th class from any field",
+            "12th class from any field",
+            "Try to Volunteer and Freelance",
+            "Create a Portfolio"
+        ]
     }
 }

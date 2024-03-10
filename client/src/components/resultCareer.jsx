@@ -1,15 +1,18 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Career({career}) {
   return(
   <>
       <div className="div-18">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e62db9d26be5f1f8cd9438420838130244d6f5a4a2c8d94e969d74d9866748e?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-          className="img-2"
-        />
-        <div className="div-19">{career}</div>
+        <Link to="/matched" state={{career: career}}>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e62db9d26be5f1f8cd9438420838130244d6f5a4a2c8d94e969d74d9866748e?apiKey=d105f6bd6bb4472bba21449537e0b092&"
+            className="img-2"
+          />
+          <div className="div-19">{career}</div>
+        </Link>
         <div className="div-20">
           Lorem ipsum dolor sit amet, consectetuer adipiscing
           elit. Aenean commodo ligula eget dolor.{" "}

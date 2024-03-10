@@ -1,44 +1,30 @@
 import * as React from "react";
+import { Link, useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import careerPaths from "../data/careerPaths.json";
 
 export default function Matched() {
+  const location = useLocation();
+  const { career } = location.state;
+  const careerInfo = careerPaths[career];
+
   return (
     <>
+      <Navbar />
       <div className="div">
-        <div className="div-2">
-          <div className="div-3">
-            Career
-            <br />
-            Carrier
-          </div>
-          <div className="div-4">
-            <div className="div-5">Career</div>
-            <div className="div-6">About</div>
-            <div className="div-7">Contact</div>
-            <div className="div-8">Help</div>
-            <div className="div-9">Take Test</div>
-          </div>
-        </div>
         <div className="div-10">
           <div className="div-11">
             <div className="column">
               <div className="div-12">
                 <div className="div-13">How to pursue?</div>
+                <div className="div-14 title">{career}</div>
                 <div className="div-14">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus <br />
-                  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                  quis, sem. Nulla consequat massa quis enim.
+                  {careerInfo?.desc}
                 </div>
-                <div className="div-15">
-                  Qualifications and certification courses required
-                </div>
-                <div className="div-16" />
-                <div className="div-17" />
-                <div className="div-18" />
-                <div className="div-19" />
-                <div className="div-20" />
+                <div className="div-15">Qualifications and certification courses required</div>
+                {careerInfo?.path.map((stepInfo) => {
+                  return <div className="div-16">{stepInfo}</div>
+                })}
               </div>
             </div>
             <div className="column-2">
@@ -56,10 +42,10 @@ export default function Matched() {
         </div>
         <div className="div-22">
           <div className="div-23">
-            <div className="div-24">Start Asessment again</div>
-            <div className="div-25">Discover </div>
+            <Link to="/assessment2"><div className="div-24">Start Asessment again</div></Link>
+            <Link to="/careers"><div className="div-25">Discover </div></Link>
           </div>
-          <div className="div-26">Give Feedback</div>
+          <Link to="/feedback"><div className="div-26">Give Feedback</div></Link>
         </div>
       </div>
       <style jsx>{`
@@ -74,80 +60,13 @@ export default function Matched() {
             padding: 0 20px;
           }
         }
-        .div-2 {
-          display: flex;
-          width: 579px;
-          max-width: 100%;
-          justify-content: space-between;
-          gap: 20px;
-          white-space: nowrap;
-        }
-        @media (max-width: 991px) {
-          .div-2 {
-            flex-wrap: wrap;
-            white-space: initial;
-          }
-        }
-        .div-3 {
-          color: var(--Colour-Logo-Primary, #37447e);
-          font-feature-settings: "clig" off, "liga" off;
-          font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,
-            sans-serif;
-        }
-        .div-4 {
-          align-self: start;
-          display: flex;
-          margin-top: 12px;
-          justify-content: space-between;
-          gap: 20px;
-          font-size: 14px;
-          color: var(--Colour-Main-Blue-500, #505f98);
-          font-weight: 400;
-          line-height: 171%;
-        }
-        @media (max-width: 991px) {
-          .div-4 {
-            max-width: 100%;
-            flex-wrap: wrap;
-            white-space: initial;
-          }
-        }
-        .div-5 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        .div-6 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-7 {
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-8 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-        }
-        .div-9 {
-          color: #505f98;
-          font-feature-settings: "clig" off, "liga" off;
-          font-family: Roboto, sans-serif;
-          flex-grow: 1;
-        }
-        @media (max-width: 991px) {
-          .div-9 {
-            white-space: initial;
-          }
-        }
         .div-10 {
           background-color: rgba(216, 212, 244, 1);
           align-self: center;
-          margin-top: 19px;
+          margin: 80px auto 0;
           width: 1273px;
           max-width: 100%;
-          padding: 34px 80px 34px 16px;
+          padding: 10px 30px;
         }
         @media (max-width: 991px) {
           .div-10 {
@@ -181,7 +100,7 @@ export default function Matched() {
           display: flex;
           flex-grow: 1;
           flex-direction: column;
-          font-size: 36px;
+          font-size: 30px;
           color: #091133;
           font-weight: 500;
         }
@@ -194,7 +113,7 @@ export default function Matched() {
         .div-13 {
           font-feature-settings: "clig" off, "liga" off;
           font-family: Roboto, sans-serif;
-          line-height: 133%;
+          line-height: 110%;
         }
         @media (max-width: 991px) {
           .div-13 {
@@ -205,7 +124,7 @@ export default function Matched() {
           color: var(--Colour-Main-Blue-400, #6f7cb2);
           font-feature-settings: "clig" off, "liga" off;
           margin-top: 13px;
-          font: 400 16px/26px Roboto, -apple-system, Roboto, Helvetica,
+          font: 400 16px/24px Roboto, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -213,10 +132,14 @@ export default function Matched() {
             max-width: 100%;
           }
         }
+        .div-14.title {
+          font-size: 20px;
+          font-weight: 600;
+        }
         .div-15 {
           font-feature-settings: "clig" off, "liga" off;
           font-family: Roboto, sans-serif;
-          line-height: 48px;
+          line-height: 40px;
           margin-top: 27px;
         }
         @media (max-width: 991px) {
@@ -225,52 +148,14 @@ export default function Matched() {
           }
         }
         .div-16 {
+          font-size: 20px;
+          color: #6f7cb2;
           background-color: #bdbbe0;
-          margin-top: 12px;
-          height: 73px;
+          padding: 5px;
+          margin-top: 10px;
         }
         @media (max-width: 991px) {
           .div-16 {
-            max-width: 100%;
-          }
-        }
-        .div-17 {
-          background-color: #bdbbe0;
-          margin-top: 28px;
-          height: 73px;
-        }
-        @media (max-width: 991px) {
-          .div-17 {
-            max-width: 100%;
-          }
-        }
-        .div-18 {
-          background-color: #bdbbe0;
-          margin-top: 39px;
-          height: 73px;
-        }
-        @media (max-width: 991px) {
-          .div-18 {
-            max-width: 100%;
-          }
-        }
-        .div-19 {
-          background-color: #bdbbe0;
-          margin-top: 39px;
-          height: 73px;
-        }
-        @media (max-width: 991px) {
-          .div-19 {
-            max-width: 100%;
-          }
-        }
-        .div-20 {
-          background-color: #bdbbe0;
-          margin-top: 28px;
-          height: 73px;
-        }
-        @media (max-width: 991px) {
-          .div-20 {
             max-width: 100%;
           }
         }
@@ -278,7 +163,7 @@ export default function Matched() {
           display: flex;
           flex-direction: column;
           line-height: normal;
-          width: 50%;
+          width: 40%;
           margin-left: 20px;
         }
         @media (max-width: 991px) {
@@ -305,7 +190,7 @@ export default function Matched() {
           font-feature-settings: "clig" off, "liga" off;
           align-self: start;
           margin: 16px 0 0 61px;
-          font: 400 22px/145% Roboto, -apple-system, Roboto, Helvetica,
+          font: 400 20px/130% Roboto, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -346,7 +231,7 @@ export default function Matched() {
           justify-content: center;
           color: var(--colour-secondary-white-100-general, #fff);
           white-space: nowrap;
-          padding: 11px 14px;
+          padding: 10px 14px;
         }
         @media (max-width: 991px) {
           .div-24 {
@@ -362,7 +247,7 @@ export default function Matched() {
           justify-content: center;
           align-items: center;
           color: var(--Colour-Main-Blue-900, #091133);
-          padding: 12px 60px;
+          padding: 8px 60px;
         }
         @media (max-width: 991px) {
           .div-25 {
@@ -376,7 +261,7 @@ export default function Matched() {
           justify-content: center;
           color: var(--colour-secondary-white-100-general, #fff);
           margin: auto 0;
-          padding: 9px 41px;
+          padding: 10px 41px;
           font: 12px/150% Roboto, sans-serif;
         }
         @media (max-width: 991px) {

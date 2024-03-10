@@ -8,6 +8,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const predictRoute = require("./routes/predict");
 const questionRoute = require("./routes/question");
+const feedbackRoute = require("./routes/feedback");
 
 /* setting up the configurations for connection */
 dotenv.config();
@@ -27,6 +28,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/predict", predictRoute);
 app.use("/api/question", questionRoute);
+app.use("/api/feedback", feedbackRoute);
 
 /* starting the server */
 app.listen("5001", () => {

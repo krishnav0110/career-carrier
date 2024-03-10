@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../context/Context";
+import logo from "../images/logo.jpg";
 
 export default function Navbar() {
   const { user, dispatch } = useContext(Context);
@@ -13,11 +14,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar-con">
-        <Link to="/"><div className="navbar-logo">
-          Career
-          <br />
-          Carrier
-        </div>
+        <Link to="/"><img src={logo} className="navbar-logo" />
         </Link>
         <div className="navbar-links">
           <Link to="/Careers"><div className="navbar-link">Careers</div></Link>
@@ -56,7 +53,8 @@ export default function Navbar() {
           }
         }
         .navbar-logo {
-          margin: 10px;
+          margin: 15px;
+          width: 100px;
           color: var(--Colour-Logo-Primary, #37447e);
           font-feature-settings: "clig" off, "liga" off;
           font: 900 26px/38px Roboto, -apple-system, Roboto, Helvetica,

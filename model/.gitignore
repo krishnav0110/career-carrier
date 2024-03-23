@@ -1,0 +1,11 @@
+__pycache__
+raw_data/
+transformed_data/
+
+*.pkl
+dataset_conv.ipynb
+tests.py
+visual.py
+
+transform_data.py
+combine_data.py

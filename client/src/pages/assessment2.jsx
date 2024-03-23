@@ -10,7 +10,7 @@ export default function Assessment2() {
   const [ques, setQues] = useState("");
   const [quesFade, setQuesFade] = useState(false);
   const [responses, setResponses] = useState([]);
-  const maxBatchQuesCount = 17;
+  const maxBatchQuesCount = 76;
 
   useEffect(() => {
     const fetchQues  = async () => {
@@ -61,13 +61,13 @@ export default function Assessment2() {
                     <div className="div-18">Question {quesno}</div>
                     <div>{ques}</div>
                     
-                    <button className="div-19" onClick={nextQuestion(1)}>Not Interested</button>
-                    <button className="div-19" onClick={nextQuestion(2)}>Poor</button>
-                    <button className="div-19" onClick={nextQuestion(3)}>Beginner</button>
-                    <button className="div-19" onClick={nextQuestion(4)}>Average</button>
-                    <button className="div-19" onClick={nextQuestion(5)}>Intermediate</button>
-                    <button className="div-19" onClick={nextQuestion(7)}>Excellent</button>
-                    <button className="div-19" onClick={nextQuestion(9)}>Professional</button>
+                    <button className="div-19" onClick={nextQuestion(0.1)}>Not Interested</button>
+                    <button className="div-19" onClick={nextQuestion(0.2)}>Poor</button>
+                    <button className="div-19" onClick={nextQuestion(0.3)}>Beginner</button>
+                    <button className="div-19" onClick={nextQuestion(0.4)}>Average</button>
+                    <button className="div-19" onClick={nextQuestion(0.5)}>Intermediate</button>
+                    <button className="div-19" onClick={nextQuestion(0.7)}>Excellent</button>
+                    <button className="div-19" onClick={nextQuestion(0.9)}>Professional</button>
                     
                     <img
                       loading="lazy"

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import pickle
-career = pd.read_csv('combined_data/data.csv')
+career = pd.read_csv('combined_data/data_old.csv')
 
 # sns.countplot(x='Role', data=career)
 # plt.xticks(rotation=90)
@@ -24,7 +24,7 @@ print(Counter(y))
 
 ## splitting the data into training and test sets 
 from sklearn.model_selection import train_test_split 
-X_train, X_test, y_train, y_test = train_test_split(X, y,test_size = 0.3)
+X_train, X_test, y_train, y_test = train_test_split(X, y,test_size = 0.3, stratify=y)
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 
@@ -32,12 +32,13 @@ from sklearn import metrics
 
 # elbow method
 error_rate = []
-max_kneighbor = 60
+max_kneighbor = 40
 for i in range(1, max_kneighbor):
     knn = KNeighborsClassifier(n_neighbors=i)
     knn.fit(X_train, y_train)
-    pred_i = knn.predict(X_test)
-    error_rate.append(np.mean(pred_i != y_test))
+    pred_i = knn.predict_proba(X_test)
+    pred_i /= np.sum(pred_i)
+    error_rate.append(metrics.log_loss(y_test, pred_i))
 
 plt.figure(figsize=(10, 6))
 plt.plot(range(1, max_kneighbor), error_rate, color='blue',
@@ -49,12 +50,21 @@ plt.xlabel('K Value')
 plt.ylabel('Error Rate')
 plt.show()
 
+from sklearn.model_selection import GridSearchCV
+param_grid = {
+    'n_neighbors': [value for value in range(1, 20)]
+}
+gs = GridSearchCV(KNeighborsClassifier(), param_grid, scoring='neg_log_loss')
+gs.fit(X, y)
+print(gs.best_params_)
+print(gs.best_score_)
+
 
 
 
 
 scores = {}
-knn = KNeighborsClassifier(n_neighbors=21)
+knn = KNeighborsClassifier(n_neighbors=11)
 
 knn.fit(X_train, y_train)
 print('predicting')
@@ -62,6 +72,10 @@ y_pred = knn.predict(X_test)
 print('score calculating')
 scores[5] = metrics.accuracy_score(y_test, y_pred)
 print('Accuracy=',scores[5]*100)
+y_pred = knn.predict_proba(X_test)
+y_pred /= np.sum(y_pred)
+scores[4] = metrics.log_loss(y_test, y_pred)
+print('Log Loss=',scores[4])
 
 
 
@@ -74,12 +88,12 @@ print('Accuracy=',scores[5]*100)
 
 # conf_matrix = metrics.confusion_matrix(y_test, y_pred)
 # print(conf_matrix)
-# sns.heatmap(pd.DataFrame(conf_matrix), annot=True, fmt='g', xticklabels=career.columns, yticklabels=career.columns)
+# sns.heatmap(pd.DataFrame(conf_matrix), annot=True, fmt='g', xticklabels=knn.classes_, yticklabels=knn.classes_)
 # plt.xlabel('Predicted')
 # plt.ylabel('Actual')
 # plt.tight_layout()
 # plt.show()
 
 
-pickle.dump(knn, open('knn_model.pkl','wb'))
+pickle.dump(knn, open('knn_model_old.pkl','wb'))
 print('test file created')

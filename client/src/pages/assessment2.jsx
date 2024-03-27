@@ -10,27 +10,28 @@ export default function Assessment2() {
   const [ques, setQues] = useState("");
   const [quesFade, setQuesFade] = useState(false);
   const [responses, setResponses] = useState([]);
-  const maxBatchQuesCount = 76;
 
   useEffect(() => {
     const fetchQues  = async () => {
-      const res = await axios.get("http://localhost:5001/api/question/" + quesno);
+      const res = await axios.get("http://localhost:5001/api/question/"+1);
+      console.log(res);
       setQues(res.data);
     }
     fetchQues();
-  }, [quesno]);
+  }, []);
 
-  const nextQuestion = response => () => {
-    setResponses(prevResponses => {
-      return [...prevResponses, response];
-    });
-    if(quesno > maxBatchQuesCount) {
+  const nextQuestion = response => async () => {
+    if(ques.type === "none") {
       navigate('/results', {state: responses});
     }
     else {
-      setQuesFade(true);
-      setQuesno(quesno + 1);
+      setQuesno(quesno+1);
+      // setQuesFade(true);
     }
+    setResponses(prevResponses => {return [...prevResponses, response]});
+    const res = await axios.get("http://localhost:5001/api/question/" + (quesno+1));
+    const question = res.data;
+    setQues(question);
   };
 
   return (
@@ -48,7 +49,7 @@ export default function Assessment2() {
                 <div 
                   className={quesFade ? "div-13 fade" : "div-13"} 
                   onAnimationEnd={() => setQuesFade(false)}
-                  style={{pointerEvents: quesFade ? 'none' : 'auto'}}
+                  // style={{pointerEvents: quesFade ? 'none' : 'auto'}}
                 >
                   <div className="div-15">
                     <div className="div-16">
@@ -59,15 +60,31 @@ export default function Assessment2() {
                       />
                     </div>
                     <div className="div-18">Question {quesno}</div>
-                    <div>{ques}</div>
+                    <div>{ques.ques}</div>
                     
-                    <button className="div-19" onClick={nextQuestion(0.1)}>Not Interested</button>
-                    <button className="div-19" onClick={nextQuestion(0.2)}>Poor</button>
-                    <button className="div-19" onClick={nextQuestion(0.3)}>Beginner</button>
-                    <button className="div-19" onClick={nextQuestion(0.4)}>Average</button>
-                    <button className="div-19" onClick={nextQuestion(0.5)}>Intermediate</button>
-                    <button className="div-19" onClick={nextQuestion(0.7)}>Excellent</button>
-                    <button className="div-19" onClick={nextQuestion(0.9)}>Professional</button>
+                    {ques.type === "skill" ? (
+                      <>
+                        <button className="div-19" onClick={nextQuestion(0.1)}>Not Interested</button>
+                        <button className="div-19" onClick={nextQuestion(0.2)}>Poor</button>
+                        <button className="div-19" onClick={nextQuestion(0.3)}>Beginner</button>
+                        <button className="div-19" onClick={nextQuestion(0.4)}>Average</button>
+                        <button className="div-19" onClick={nextQuestion(0.5)}>Intermediate</button>
+                        <button className="div-19" onClick={nextQuestion(0.7)}>Excellent</button>
+                        <button className="div-19" onClick={nextQuestion(0.9)}>Professional</button>
+                      </>
+                    ) : (ques.type === "interest") ? (
+                      <>
+                        <button className="div-19" onClick={nextQuestion(0.1)}>Hate it</button>
+                        <button className="div-19" onClick={nextQuestion(0.3)}>Dislike it</button>
+                        <button className="div-19" onClick={nextQuestion(0.5)}>Neutral</button>
+                        <button className="div-19" onClick={nextQuestion(0.7)}>Like it</button>
+                        <button className="div-19" onClick={nextQuestion(0.9)}>Love it</button>
+                      </>
+                    ) : (
+                      <>
+                        <button className="div-19" onClick={nextQuestion(0.1)}>Get Results</button>
+                      </>
+                    )}
                     
                     <img
                       loading="lazy"

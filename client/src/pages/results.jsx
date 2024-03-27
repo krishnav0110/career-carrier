@@ -46,7 +46,7 @@ export default function Results(props) {
                 <div className="div-16">
                   <div className="div-17">
                     {careers.map((career) => (
-                      <Career career={career} />
+                      <Career career={career.name} />
                     ))}
                   </div>
                 </div>

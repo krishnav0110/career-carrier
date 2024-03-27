@@ -15,32 +15,30 @@ def predict():
 		data = np.array(data['data'])
 		data = data.reshape(1,-1)
 
-		loaded_model = pickle.load(open("knn_model.pkl", 'rb'))
+		loaded_model = pickle.load(open("rfc_model.pkl", 'rb'))
 		predictions = loaded_model.predict(data)
 
 		pred = loaded_model.predict_proba(data)
+		print(pred)
 
 		jobs_dict = loaded_model.classes_
-		pred = pred > 0.01
-		j = 0
-		index = 0
-		res = {}
-		final_res = []
-		while j < len(jobs_dict):
-			if pred[0, j]:
-				res[index] = j
-				index += 1
-			j += 1
 
-		index = 0
-		for key, values in res.items():
-			if values != predictions[0]:
-				final_res.append(values)
-				index += 1
+		final_res = []
+		for index in range(len(jobs_dict)):
+			if pred[0, index] > 0.1:
+				final_res.append(index)
+		
+		print(final_res)
 
 		careers = []
+		rating_sum = 0
 		for index in final_res:
-			careers.append(jobs_dict[index])
+			careers.append({'name': jobs_dict[index], 'rate': pred[0, index]})
+			rating_sum += pred[0, index]
+		
+		for career in careers:
+			career['rate'] /= rating_sum
+		
 		final_res = {'careers': careers}
 		return json.dumps(final_res)
 

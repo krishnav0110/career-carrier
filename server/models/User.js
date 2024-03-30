@@ -16,6 +16,20 @@ const UserSchema = new mongoose.Schema({
 	lastName: {
 		type: String,
 		required: true,
+	},
+	qualification: {
+		type: String,
+		enum: ["10", "12", "UG"],
+		required: false,
+	},
+	stream: {
+		type: String,
+		enum: ["Science", "Commerce", "Arts"],
+		required: false,
+	},
+	salary: {
+		type: Number,
+		required: false,
 	}
 },
 { timestamps: true });

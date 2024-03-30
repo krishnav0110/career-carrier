@@ -4,16 +4,25 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import Career from "../components/resultCareer";
+import careerPaths from "../data/careerPaths.json";
 
 export default function Results(props) {
   const [careers, setCareers] = useState([]);
   const { state } = useLocation();
+  const [filter, setFilter] = useState("");
+  const [filterClicked, setFilterClicked] = useState(false);
 
   useEffect(() => {
     const fetchResults  = async () => {
       const res = await axios.post("http://localhost:5001/api/predict/", {data: state});
       const data = res.data;
+      data.map((career) => {
+        career['salary'] = careerPaths[career.name].salary;
+        career['desc'] = careerPaths[career.name].desc;
+        return career;
+      });
       setCareers(data);
+      setFilter("");
     }
     fetchResults();
   }, [state]);
@@ -43,10 +52,27 @@ export default function Results(props) {
                   quis, sem. Nulla consequat massa quis enim.
                 </div>
                 <div className="div-15">Your potential career matches..</div>
+                <div className="choose-filter" onMouseLeave={() => setFilterClicked(false)}>
+                  <div className="filter-title" onMouseDown={() => setFilterClicked(true)}>Choose Sort</div>
+                  <div className="filter-list" style={{display: filterClicked ? "block" : "none"}}>
+                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Recommended")}}>Recommended</div>
+                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Salary")}}>Salary</div>
+                  </div>
+                </div>
                 <div className="div-16">
                   <div className="div-17">
-                    {careers.map((career) => (
-                      <Career career={career.name} />
+                    {filter === "Recommended" ? (
+                      careers.sort((a, b) => {return b.rate - a.rate}).map((career) => (
+                        <Career career={career} />
+                      ))
+                    ) : (filter === "Salary" ? (
+                      careers.sort((a, b) => {return b.salary - a.salary}).map((career) => (
+                        <Career career={career} />
+                      ))
+                    ) : (
+                      careers.map((career) => (
+                        <Career career={career} />
+                      ))
                     ))}
                   </div>
                 </div>
@@ -56,6 +82,27 @@ export default function Results(props) {
         </div>
       </div>
       <style jsx>{`
+        .choose-filter {
+          margin: 10px 0 0 0;
+          align-self: start;
+          position: relative;
+          cursor: pointer;
+        }
+        .filter-title {
+          padding: 5px 20px;
+          border: 1px solid black;
+        }
+        .filter-list {
+          position: absolute;
+          background-color: #cccccc;
+          border-radius: 0 0 5px 5px;
+          padding: 0 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+        }
+        .filter-list-item {
+          padding: 5px 10px;
+          border-top: 2px solid white;
+        }
         .div {
           background-color: #fff;
           display: flex;

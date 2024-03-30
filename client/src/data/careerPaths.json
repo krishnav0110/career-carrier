@@ -1,6 +1,7 @@
 {
     "UI/UX Designer": {
         "desc": "UI design is the designing of user interfaces. UX design make the screen flow easily, simply, matching the user's mental model. UI/UX Design is the combination of good typography, colors, and graphics.",
+        "salary": 65000,
         "path": [
             "10th class from any field",
             "12th class from any field",
@@ -10,6 +11,7 @@
     },
     "Actor": {
         "desc": "Acting is acting bruh...",
+        "salary": 100000,
         "path": [
             "10th class from any field",
             "12th class from any field",

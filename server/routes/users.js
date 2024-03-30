@@ -4,23 +4,18 @@ const bcrypt = require('bcrypt');
 
 //UPDATE
 router.put('/:id', async (req, res) => {
-    const userId = req.body.userId;
-    if(userId === req.params.id) {
-      	if(req.body.password) {
-          	const salt = await bcrypt.genSalt(10);
-          	req.body.password = await bcrypt.hash(req.body.password, salt);
-      	}
-    	try {
-	      	const updatedUser = await User.findByIdAndUpdate(req.params.id, {
-	        	$set: req.body
-      		}, {new: true });
-        	res.status(200).json(updatedUser);
-    	} catch(err) {
-      		res.status(500).json(err);
-    	}
-  	} else {
-      	res.status(401).json('cant update other account');
-  	}
+    try {
+	  	const updatedUser = await User.findByIdAndUpdate(req.params.id, {
+	    	$set: {
+				qualification: req.body.qualification,
+				stream: req.body.stream,
+				salary: req.body.salary,
+			}
+    	}, {new: true });
+    	res.status(200).json(updatedUser);
+    } catch(err) {
+    	res.status(500).json(err);
+    }
 });
 
 //DELETE

@@ -5,17 +5,16 @@ export default function Career({career}) {
   return(
   <>
       <div className="div-18">
-        <Link to="/matched" state={{career: career}}>
+        <Link to="/matched" state={{career: career.name}}>
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e62db9d26be5f1f8cd9438420838130244d6f5a4a2c8d94e969d74d9866748e?apiKey=d105f6bd6bb4472bba21449537e0b092&"
             className="img-2"
           />
-          <div className="div-19">{career}</div>
+          <div className="div-19">{career.name}</div>
         </Link>
         <div className="div-20">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing
-          elit. Aenean commodo ligula eget dolor.{" "}
+          {career.desc}
         </div>
       </div>
     <style jsx>{`
@@ -26,6 +25,9 @@ export default function Career({career}) {
         line-height: normal;
         width: 40%;
         margin-left: 0px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
       }
       @media (max-width: 991px) {
         .div-18 {
@@ -56,8 +58,9 @@ export default function Career({career}) {
         color: var(--Colour-Main-Grey-600, #5d6970);
         font-feature-settings: "clig" off, "liga" off;
         margin-top: 18px;
-        font: 400 12px/18px Roboto, -apple-system, Roboto, Helvetica,
-          sans-serif;
+        font: 400 12px/18px Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+        max-height: 50px;
+        mask-image: linear-gradient(0deg, transparent, black 100%, transparent 100%);
       }
     `}</style>  
   </>);

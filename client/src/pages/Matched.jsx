@@ -23,7 +23,7 @@ export default function Matched() {
                 </div>
                 <div className="div-15">Qualifications and certification courses required</div>
                 {careerInfo?.path.map((stepInfo) => {
-                  return <div className="div-16">{stepInfo}</div>
+                  if(stepInfo) return <div className="div-16">{stepInfo}</div>
                 })}
               </div>
             </div>

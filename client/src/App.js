@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/Community" element={<Community />} />
         <Route exact path="/ContactUs" element={<Contactus />} />
         <Route exact path="/FeedBack" element={user ? <Feedback /> : <Login />} />
-        <Route exact path="/Goals" element={<Goals />} /> 
+        <Route exact path="/Goals" element={user ? <Goals /> : <Login />} /> 
         <Route path="/Assessment2" element={user ? <Assessment2 /> : <Login />} />
         <Route path="/Help" element={<Help />} />
         <Route path="/Inputs/:id?" element={<Inputs />} />

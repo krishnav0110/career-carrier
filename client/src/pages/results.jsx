@@ -1,12 +1,14 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import Career from "../components/resultCareer";
 import careerPaths from "../data/careerPaths.json";
+import { Context } from "../context/Context";
 
 export default function Results(props) {
+  const { user } = useContext(Context);
   const [careers, setCareers] = useState([]);
   const { state } = useLocation();
   const [filter, setFilter] = useState("");
@@ -54,9 +56,10 @@ export default function Results(props) {
                 <div className="div-15">Your potential career matches..</div>
                 <div className="choose-filter" onMouseLeave={() => setFilterClicked(false)}>
                   <div className="filter-title" onMouseDown={() => setFilterClicked(true)}>Choose Sort</div>
-                  <div className="filter-list" style={{display: filterClicked ? "block" : "none"}}>
-                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Recommended")}}>Recommended</div>
-                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Salary")}}>Salary</div>
+                  <div className="filter-list" style={{maxHeight: filterClicked ? "150px" : "0"}}>
+                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Recommended")}}>Recommended- Highest to Lowest</div>
+                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Salary")}}>Salary- Highest to Lowest</div>
+                    <div className="filter-list-item" onClick={() => {setFilterClicked(false); setFilter("Qualification")}}>Qualification</div>
                   </div>
                 </div>
                 <div className="div-16">
@@ -69,11 +72,28 @@ export default function Results(props) {
                       careers.sort((a, b) => {return b.salary - a.salary}).map((career) => (
                         <Career career={career} />
                       ))
+                    ) : (filter === "Qualification" ? (
+                      careers.filter(career => {
+                        if(user.qualification === "12" || user.qualification === "UG") {
+                          const requiredStream = careerPaths[career.name].path[1].split(" ")[3];
+                          if(requiredStream === "any") {
+                            return true;
+                          } else if(user.stream === requiredStream) {
+                            return true;
+                          } else {
+                            return false;
+                          }
+                        } else {
+                          return true;
+                        }
+                      }).map(career => (
+                        <Career career={career} />
+                      ))
                     ) : (
                       careers.map((career) => (
                         <Career career={career} />
                       ))
-                    ))}
+                    )))}
                   </div>
                 </div>
               </div>
@@ -83,8 +103,7 @@ export default function Results(props) {
       </div>
       <style jsx>{`
         .choose-filter {
-          margin: 10px 0 0 0;
-          align-self: start;
+          margin: 10px 30px 0;
           position: relative;
           cursor: pointer;
         }
@@ -94,14 +113,16 @@ export default function Results(props) {
         }
         .filter-list {
           position: absolute;
-          background-color: #cccccc;
+          background-color: white;
           border-radius: 0 0 5px 5px;
           padding: 0 5px;
+          transition: max-height 1s;
+          overflow: hidden;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
         }
         .filter-list-item {
-          padding: 5px 10px;
-          border-top: 2px solid white;
+          padding: 8px 10px;
+          border-top: 2px solid #cccccc;
         }
         .div {
           background-color: #fff;

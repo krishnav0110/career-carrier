@@ -44,6 +44,7 @@ export default function Navbar() {
           justify-content: space-between;
           gap: 20px;
           z-index: 1000;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
         }
         @media (max-width: 991px) {
           .navbar-con {

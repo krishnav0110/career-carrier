@@ -1,8 +1,8 @@
 __pycache__
 raw_data/
 transformed_data/
+models/
 
-*.pkl
 dataset_conv.ipynb
 tests.py
 visual.py

@@ -23,18 +23,7 @@ export default function About() {
                   Successful Learners
                 </div>
                 <div className="div-17">
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut al Ut enim ad minima
-                  veniam, quis nostrum exercitationem ullam corporis suscipit
-                  laboriosam, nisi ut al
-                </div>
-                <div className="div-18">
-                  <div className="div-19">View More</div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/85bd8653aac18b4a3f54d38859d20387df4aa33f4484da4e57af83629afc437f?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-                    className="img-2"
-                  />
+                  Welcome to our Career Predictor and Awareness Portal! We're dedicated to revolutionizing the way individuals approach their career decisions and aspirations. Our platform is designed to empower users with the tools, insights, and guidance necessary to navigate the complex landscape of career choices effectively.
                 </div>
               </div>
             </div>
@@ -69,18 +58,7 @@ export default function About() {
                   Enjoy Learning with a Unique Classroom Experience
                 </div>
                 <div className="div-25">
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut al Ut enim ad minima
-                  veniam, quis nostrum exercitationem ullam corporis suscipit
-                  laboriosam, nisi ut al
-                </div>
-                <div className="div-26">
-                  <div className="div-27">View More</div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ea3ac634898af21acbac9228ccde868307ac149e101ecd142b2ecc874083663?apiKey=d105f6bd6bb4472bba21449537e0b092&"
-                    className="img-6"
-                  />
+                  At Career Predictor and Awareness Portal, our mission is simple yet profound: to foster a future where every individual finds fulfillment and success in their chosen career path. We believe that informed decision-making is the cornerstone of a fulfilling career, and our platform is committed to providing the resources needed to make those decisions confidently.
                 </div>
               </div>
             </div>

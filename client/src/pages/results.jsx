@@ -46,12 +46,7 @@ export default function Results(props) {
               <div className="div-12">
                 <div className="div-13">Your Results</div>
                 <div className="div-14">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus <br />
-                  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                  quis, sem. Nulla consequat massa quis enim.
+                  Congratulations on completing your career aptitude test! Your results reveal valuable insights into your strengths, preferences, and potential career paths. Armed with this knowledge, you're better equipped to make informed decisions about your future.
                 </div>
                 <div className="div-15">Your potential career matches..</div>
                 <div className="choose-filter" onMouseLeave={() => setFilterClicked(false)}>

@@ -36,11 +36,11 @@ export default function Feedback() {
               <form className="div-6" onSubmit={handleSubmit}>
                 <div className="div-12">How was your experience?</div>
                 <div className="div-13">
-                  <img onClick={() => {setRating(1)}} loading="lazy" src="..." className="img-4" />
-                  <img onClick={() => {setRating(2)}} loading="lazy" src="..." className="img-4" />
-                  <img onClick={() => {setRating(3)}} loading="lazy" src="..." className="img-4" />
-                  <img onClick={() => {setRating(4)}} loading="lazy" src="..." className="img-4" />
-                  <img onClick={() => {setRating(5)}} loading="lazy" src="..." className="img-4" />
+                  <img onClick={() => {setRating(1)}} style={{filter: rating===1?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b5a347c519a2151c7f11feb347d04954d164b1b7bfd9d02f6952bf2a9aba10e?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+                  <img onClick={() => {setRating(2)}} style={{filter: rating===2?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5c644590b77da092dfa144d5e04ac2f80ac6974394dc7053bb40106ab9f94aa?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+                  <img onClick={() => {setRating(3)}} style={{filter: rating===3?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e95eeb06a0f64bce33864b6ce83bc77c37c637c52dbe14cc203663e5acde8435?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+                  <img onClick={() => {setRating(4)}} style={{filter: rating===4?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c06c92d92a88e9f67f3a22c7ef042a4e2663cb4f71da73c08b492f47a52803b3?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+                  <img onClick={() => {setRating(5)}} style={{filter: rating===5?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/afb33651047b3c725d2dc8d10ac39696df765a9383fcbcaaefa435d6e6df5d7d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
                 </div>
                 <div className="div-14">Choose your experience</div>
                 <textarea type="text" 
@@ -153,7 +153,11 @@ export default function Feedback() {
           object-fit: auto;
           object-position: center;
           width: 40px;
+          transition: transform 0.5s;
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        .img-4:hover {
+          transform: scale(1.3);
         }
         .div-14 {
           color: var(--Grayscale-Shaded-White, #bbb);

@@ -3,18 +3,16 @@ export default function Feedback({feedback}) {
     <>
       <div className="column">
         <div className="div-14">
-          <img loading="lazy" srcSet="..." className="img" />
           <div className="div-15">{feedback.name}</div>
-          <div className="div-16">{feedback.designation}</div>
+          <div className="div-18">
+            <img style={{filter: feedback.rating===1?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b5a347c519a2151c7f11feb347d04954d164b1b7bfd9d02f6952bf2a9aba10e?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+            <img style={{filter: feedback.rating===2?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5c644590b77da092dfa144d5e04ac2f80ac6974394dc7053bb40106ab9f94aa?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+            <img style={{filter: feedback.rating===3?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e95eeb06a0f64bce33864b6ce83bc77c37c637c52dbe14cc203663e5acde8435?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+            <img style={{filter: feedback.rating===4?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c06c92d92a88e9f67f3a22c7ef042a4e2663cb4f71da73c08b492f47a52803b3?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+            <img style={{filter: feedback.rating===5?'brightness(100%)':'brightness(60%)'}} loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/afb33651047b3c725d2dc8d10ac39696df765a9383fcbcaaefa435d6e6df5d7d?apiKey=d105f6bd6bb4472bba21449537e0b092&width=100" className="img-4" />
+          </div>
           <div className="div-17">
             {feedback.review}
-          </div>
-          <div className="div-18">
-            <img loading="lazy" src="..." className="img-4" />
-            <img loading="lazy" src="..." className="img-4" />
-            <img loading="lazy" src="..." className="img-4" />
-            <img loading="lazy" src="..." className="img-4" />
-            <img loading="lazy" src="..." className="img-4" />
           </div>
         </div>
       </div>

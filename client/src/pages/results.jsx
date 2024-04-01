@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Career from "../components/resultCareer";
 import careerPaths from "../data/careerPaths.json";
 import { Context } from "../context/Context";
+import ResultGraph from "../components/resultGraph";
 
 export default function Results(props) {
   const { user } = useContext(Context);
@@ -32,6 +33,7 @@ export default function Results(props) {
   return (
     <>
       <Navbar />
+      <ResultGraph careers={careers} />
       <div className="div">
         <div className="div-10">
           <div className="div-11">

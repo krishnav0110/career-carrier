@@ -27,7 +27,6 @@ router.get("/", async (req, res) => {
       };
       return feedback;
     }));
-    console.log(feedbacks);
     res.status(200).json(feedbacks);
   } catch (err) {
     res.status(500).json(err);

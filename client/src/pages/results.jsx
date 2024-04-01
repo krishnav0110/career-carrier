@@ -72,7 +72,8 @@ export default function Results(props) {
                     ) : (filter === "Qualification" ? (
                       careers.filter(career => {
                         if(user.qualification === "12" || user.qualification === "UG") {
-                          const requiredStream = careerPaths[career.name].path[1].split(" ")[3];
+                          const requiredStream = careerPaths[career.name].stream;
+                          console.log(user.qualification+":"+requiredStream);
                           if(requiredStream === "any") {
                             return true;
                           } else if(user.stream === requiredStream) {

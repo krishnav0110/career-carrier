@@ -21,7 +21,7 @@ export default function Career({career}) {
           border-radius: 15px;
           background-color: #f0f0f0;
           display: flex;
-          width: 20%;
+          width: 25%;
           flex-direction: column;
           margin: 0 auto;
           padding: 10px 20px 20px;

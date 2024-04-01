@@ -15,7 +15,7 @@ def predict():
 		data = np.array(data['data'])
 		data = data.reshape(1,-1)
 
-		loaded_model = pickle.load(open("rfc_model.pkl", 'rb'))
+		loaded_model = pickle.load(open("models/rfc_model.pkl", 'rb'))
 		predictions = loaded_model.predict(data)
 
 		pred = loaded_model.predict_proba(data)
@@ -25,7 +25,7 @@ def predict():
 
 		final_res = []
 		for index in range(len(jobs_dict)):
-			if pred[0, index] > 0.1:
+			if pred[0, index] > 0.01:
 				final_res.append(index)
 		
 		print(final_res)

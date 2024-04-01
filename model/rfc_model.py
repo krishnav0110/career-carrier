@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import pickle
-career = pd.read_csv('combined_data/data_old.csv')
+career = pd.read_csv('combined_data/data.csv')
 
 X = career.drop(['Role'], axis=1).to_numpy()
 y = career['Role'].to_numpy()
@@ -71,5 +71,5 @@ print('Log Loss=', scores[4])
 
 
 
-pickle.dump(gboost, open('rfc_model_old.pkl','wb'))
+pickle.dump(gboost, open('models/rfc_model.pkl','wb'))
 print('test file created')

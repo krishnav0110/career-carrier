@@ -16,15 +16,32 @@ export default function Matched() {
           <div className="div-11">
             <div className="column">
               <div className="div-12">
-                <div className="div-13">How to pursue?</div>
-                <div className="div-14 title">{career}</div>
+                <div className="div-13">{career}</div>
                 <div className="div-14">
                   {careerInfo?.desc}
                 </div>
+                <div className="div-14 salary">Expected Average Salary: {careerInfo?.salary}</div>
+                <div className="div-13">How to pursue?</div>
+                {careerInfo?.path?.map(stepInfo => (
+                  <div className="sub-content">{stepInfo}</div>
+                ))}
                 <div className="div-15">Qualifications and certification courses required</div>
-                {careerInfo?.path.map((stepInfo) => {
-                  if(stepInfo) return <div className="div-16">{stepInfo}</div>
-                })}
+                {careerInfo?.Certifications ? (
+                  careerInfo?.Certifications.map((certification) => (
+                    <div className="div-16">{certification}</div>
+                  ))
+                ) : (
+                  <div className="div-14">No Qualfications or Certifications courses are required.</div>
+                )}
+                {}
+                <div className="div-15">Exams and Competitions</div>
+                {careerInfo?.Exams ? (
+                  careerInfo?.Exams.map((exam) => (
+                    <div className="div-14">{exam}</div>
+                  ))
+                ) : (
+                  <div className="div-14">No Qualfications or Certifications courses are required.</div>
+                )}
               </div>
             </div>
             <div className="column-2">
@@ -111,6 +128,7 @@ export default function Matched() {
           }
         }
         .div-13 {
+          margin: 20px 0 0;
           font-feature-settings: "clig" off, "liga" off;
           font-family: Roboto, sans-serif;
           line-height: 110%;
@@ -120,10 +138,14 @@ export default function Matched() {
             max-width: 100%;
           }
         }
-        .div-14 {
+        .div-14.salary {
+          font-size: 16px;
+          color: #0b1f4b;
+        }
+        .div-14, .sub-content {
           color: var(--Colour-Main-Blue-400, #6f7cb2);
           font-feature-settings: "clig" off, "liga" off;
-          margin-top: 13px;
+          margin-top: 5px;
           font: 400 16px/24px Roboto, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
@@ -132,9 +154,10 @@ export default function Matched() {
             max-width: 100%;
           }
         }
-        .div-14.title {
-          font-size: 20px;
-          font-weight: 600;
+        .sub-content {
+          display: list-item;
+          list-style-type: disc;
+          margin: 13px 0 0 40px;
         }
         .div-15 {
           font-feature-settings: "clig" off, "liga" off;

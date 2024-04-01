@@ -1,22 +1,1056 @@
 {
-    "UI/UX Designer": {
-        "desc": "UI design is the designing of user interfaces. UX design make the screen flow easily, simply, matching the user's mental model. UI/UX Design is the combination of good typography, colors, and graphics.",
-        "salary": 65000,
+    "AI ML Specialist": {
+        "desc": "Machine learning specialists help to solve business challenges by developing and applying algorithms and devices which can learn from data and adapt to help businesses make better decisions and predictions.",
+        "stream": "Science",
+        "salary": 700000,
         "path": [
-            "10th class from any field",
-            "12th class from any field",
-            "Try to Volunteer and Freelance",
-            "Create a Portfolio"
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",
+            "Develop a strong foundation in mathematics, statistics, and programming languages like Python, which is widely used in AI/ML.",         
+            "Bachelor's Degree in AI/ML:Pursue a Bachelor's degree in Computer Science, Data Science, Artificial Intelligence, or a related field from a reputable university.",
+            "Gain hands-on experience by working on AI/ML projects, either individually or as part of academic coursework.",
+            "Participate in hackathons, competitions, or research projects related to AI/ML to apply theoretical knowledge in real-world scenarios.",
+            "Advanced Studies and Specialization:Consider pursuing a Master's degree or higher education in AI/ML for in-depth knowledge and specialization."
+        ],
+        "Certifications" : [
+            "Obtain certifications in AI/ML from reputable organizations or platforms like Coursera, edX, or Udacity to validate your skills. Develop proficiency in tools and libraries commonly used in AI/ML such as TensorFlow, PyTorch, scikit-learn, and Keras."
+        ],     
+        "Exams and Competitions": [
+            "Prepare for competitive exams like GRE (Graduate Record Examination) or GATE (Graduate Aptitude Test in Engineering) if planning to pursue higher education abroad or in India, respectively. Participate in AI/ML competitions such as Kaggle competitions to showcase your skills and learn from real-world datasets and challenges."    
         ]
     },
-    "Actor": {
-        "desc": "Acting is acting bruh...",
-        "salary": 100000,
+    
+    "API Integration Specialist": {
+        "desc": "Designing, implementing, and testing API integrations based on system requirements. Communicating risks, issues, challenges and status/ progress of the project. Documenting requirements, design, architecture, and test scripts.",
+        "stream": "Science",
+        "salary": 1000000,
         "path": [
-            "10th class from any field",
-            "12th class from any field",
-            "Try to Volunteer and Freelance",
-            "Create a Portfolio"
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science. Develop a solid understanding of computer programming, data structures, and networking fundamentals.", 
+            "Bachelor's Degree in AI/ML:Pursue a Bachelor's degree in Computer Science, Information Technology, Software Engineering, or a related field from a reputable university. Focus on courses covering web development, databases, networking, and software integration principles. Gain hands-on experience by working on web development projects, API-based applications, or software integration projects.",
+            "Advanced Studies and Specialization:Consider pursuing a Master's degree or higher education in-depth knowledge and specialization."
+        ],
+         "Certifications" : [
+                 "Obtain certifications in API development or integration from reputable organizations or online platforms like Udemy, Coursera, or API Academy. Develop proficiency in programming languages commonly used for API integration such as JavaScript, Python, or Java.",
+             "Enhance your skills in tools and frameworks like Postman, Swagger, or API Gateway."
+             ],
+          "Exams and Competitions": [
+                 "While there may not be specific exams for API Integration, consider taking relevant certifications like AWS Certified Developer or Google Cloud - Associate Cloud Engineer, which cover aspects of cloud-based API services."    
+        ]
+    },
+
+    "Actor": {
+        "desc": "Acting involves portraying characters in films, television, theater, or other performing arts mediums.",
+        "stream": "any",
+        "salary": 500000,
+        "path": [
+            "While formal education is not mandatory, consider pursuing a Bachelor's degree in Theater Arts, Performing Arts, Film Studies, or a related field to gain foundational knowledge and skills.",
+            "Participate in school drama clubs, community theater productions, or local acting workshops to gain practical experience and build your portfolio.",           
+            "Acting Classes and Workshops:Enroll in acting classes, workshops, or courses offered by reputable acting schools or studios.",
+            "Learn techniques such as improvisation, script analysis, character development, voice modulation, and body language.",   
+            "Attend auditions for local theater productions, student films, or independent projects to gain experience and exposure."    
+        ]
+    },
+    
+    "Animator": {
+        "desc": "Animation involves creating visual effects, characters, and storytelling through moving images. The scope for animators includes opportunities in films, television shows, video games, advertising, and web content.",
+        "stream": "any",
+        "salary": 750000,
+        "path": [
+            "Consider pursuing a Bachelor's degree in Animation, Multimedia Arts, Visual Effects, or a related field to gain foundational knowledge and skills.",
+            "Look for universities or colleges offering specialized animation programs with a focus on 2D animation, 3D animation, character design, and storytelling.",
+             
+            "Animation Courses and Workshops: Enroll in animation courses, workshops, or online tutorials offered by reputable animation schools, studios, or platforms.",
+            "Learn animation techniques such as keyframe animation, rigging, character animation, motion graphics, and special effects",
+            
+            "Develop skills in drawing, illustration, storytelling, and concept art to create compelling characters and narratives.",
+            "Practice using animation software such as Adobe Animate, Toon Boom Harmony, Autodesk Maya, or Blender to bring your creations to life."
+        ],
+             "Certifications": [
+                 "Consider pursuing certifications or additional training in specialized areas such as character animation, visual effects, storyboarding, or game development to enhance your skills and marketability."
+             ],
+             "Exams and Competitions" : [
+                 "Some animation programs or institutions may require portfolio reviews or art tests as part of the admission process."    
+        ]
+    },
+    
+    "Application Support Engineer": {
+        "desc": "Application Support Engineers are responsible for ensuring the smooth functioning of software applications, providing technical support to users, troubleshooting issues, and resolving system errors. The scope for Application Support Engineers includes opportunities in various industries such as IT services, software development companies, financial institutions, healthcare, and more.",
+        "stream": "Science",
+        "salary": 480000,
+        "path": [
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",
+
+            "Pursue a Bachelor's degree in Computer Science, Information Technology, Software Engineering, or a related field from a reputable university.",
+            "Focus on courses covering computer programming, databases, operating systems, software development methodologies, and IT infrastructure.Technical Skills Development:Develop proficiency in programming languages such as Java, C#, Python, or SQL, depending on the requirements of the applications you'll be supporting.",
+            "Learn about database management systems (DBMS) such as MySQL, Oracle, or Microsoft SQL Server for troubleshooting database-related issues.",
+            
+            "Internships and Practical Experience:Seek internships or entry-level positions in IT support roles, helpdesk support, or technical support teams to gain practical experience in providing support for software applications."
+        ],
+             "Certifications ":[
+                 "Consider obtaining certifications relevant to application support and IT service management, such as ITIL Foundation, CompTIA A+, or Microsoft Certified: Azure Fundamentals"    
+        ]
+    },
+    "Archaeologist": {
+        "desc": "Archaeology is the study of human history and prehistory through the excavation and analysis of artifacts, structures, and other physical remains. The scope for archaeologists includes opportunities in academic research, cultural heritage management, museum curation, government agencies, and consulting firms.",
+        "stream": "Science",
+        "salary": 560000,
+        "path": [
+            "Pursue a Bachelor's degree in Archaeology, Anthropology, History, or a related field from a reputable university.",
+            "Focus on courses covering archaeological methods, fieldwork techniques, cultural heritage preservation, ancient civilizations, and research methodologies.",
+            "Fieldwork and Practical Experience:Participate in archaeological field schools, excavations, or research projects to gain hands-on experience in archaeological fieldwork and data collection.", 
+             "Specialization and Research:Identify areas of specialization within archaeology such as classical archaeology, maritime archaeology, historical archaeology, or bioarchaeology based on your interests and career goals.",           
+             "Advanced Studies and Specialization:Consider pursuing a Master's degree or Ph.D. in Archaeology or a related discipline to deepen your knowledge, develop specialized expertise, and enhance your research skills."
+        ],
+         "Certifications ": [
+            "Obtain certifications in archaeological fieldwork techniques, artifact analysis, or cultural resource management (CRM) to demonstrate proficiency in specialized areas of archaeology."    
+        ]
+    },
+    
+    "Architecture": {
+        "desc": "Architecture involves the planning, design, and construction of buildings and structures that are functional, aesthetically pleasing, and sustainable. The scope for architects includes opportunities in architectural firms, construction companies, urban planning agencies, real estate development firms, and government organizations.",
+        "stream": "any",
+        "salary": 500000,
+        "path": [
+            "Pursue a Bachelor's degree in Architecture (B.Arch) from a recognized architecture school or university accredited by the National Architectural Accrediting Board (NAAB) or similar accrediting body in your country.",
+            "Develop skills in architectural drawing, drafting, 3D modeling, and visualization software such as AutoCAD, Revit, SketchUp, and Adobe Creative Suite.",
+
+             "Bachelor's Degree :Consider pursuing a Master's degree in Architecture (M.Arch) or a related field to deepen your knowledge, develop specialized expertise, and enhance your design skills.",
+             
+             "Upon completion of your Bachelor's degree, pursue licensure as an architect by passing the Architect Registration Examination (ARE) administered by the National Council of Architectural Registration Boards (NCARB) or the relevant licensing authority in your country"      
+        ],
+        "Certifications": [
+            "Certifications and exams essential for architecture include the Architect Registration Examination (ARE) for licensure, LEED Accreditation for sustainable design, Autodesk Revit Certification for BIM proficiency, NCARB Certification for professional recognition, Adobe Photoshop/Illustrator Certification for presentation skills, BPI Certification for energy-efficient design, and PMP Certification for project management expertise"
+        ],
+        "Exams and Competitions" : [
+            "The primary exam required for architects is the Architect Registration Examination (ARE), which is essential for licensure in most jurisdictions. "    
+   ]
+    },
+    "Auditor": {
+        "desc": "Auditors are professionals responsible for examining financial records, ensuring compliance with regulations, and providing assurance on the accuracy of financial statements. The scope for auditors includes opportunities in public accounting firms, corporate finance departments, government agencies, non-profit organizations, and consulting firms.",
+        "stream": "Commerce",
+        "salary": 1100000,
+        "path": [
+            "Pursue a Bachelor's degree in Accounting, Finance, Business Administration, or a related field from an accredited university.",
+            "Focus on courses covering auditing principles, financial accounting, managerial accounting, taxation, and business law.",
+             
+            "Bachelor's Degree :Pursue a Bachelor's degree in Computer Science, Data Science, Artificial Intelligence, or a related field from a reputable university. Gain hands-on experience by working on AI/ML projects, either individually or as part of academic coursework.",
+             "Participate in hackathons, competitions, or research projects related to AI/ML to apply theoretical knowledge in real-world scenarios.",
+             "Advanced Studies and Specialization:Consider pursuing a Master's degree or higher education in AI/ML for in-depth knowledge and specialization."
+        ],
+             "Certifications" :[
+                 "Obtain certifications in AI/ML from reputable organizations or platforms like Coursera, edX, or Udacity to validate your skills.",
+             "Develop proficiency in tools and libraries commonly used in AI/ML such as TensorFlow, PyTorch, scikit-learn, and Keras."
+             ], 
+             "Exams and Competitions" : [
+                 "Prepare for competitive exams like GRE (Graduate Record Examination) or GATE (Graduate Aptitude Test in Engineering) if planning to pursue higher education abroad or in India, respectively.",
+             "Participate in AI/ML competitions such as Kaggle competitions to showcase your skills and learn from real-world datasets and challenges."    
+        ]
+    },
+    
+    "Banker": {
+        "desc": "Banking involves managing financial transactions, providing financial services, and advising clients on various banking products and services. The scope for bankers includes opportunities in retail banking, corporate banking, investment banking, wealth management, and financial analysis.",
+        "stream": "Commerce",
+        "salary": 450000,
+        "path": [
+            "Pursue a Bachelor's degree in Finance, Economics, Business Administration, Accounting, or a related field from a reputable university. Focus on courses covering financial management, banking principles, accounting, economics, and business law.",
+             
+             "Internships and Practical Experience:Seek internships or entry-level positions at banks, financial institutions, or credit unions to gain practical experience in banking operations, customer service, and financial analysis.",
+             "Consider specializing in specific areas of banking such as retail banking, commercial banking, investment banking, private banking, or risk management based on your interests and career goals."
+        ],
+             "Certifications": [
+                 "Consider obtaining certifications such as Certified Financial Planner (CFP), Chartered Financial Analyst (CFA), or Certified Bank Auditor (CBA) to enhance your credibility and marketability in the banking industry.",
+             "Participate in training programs or workshops offered by banking associations, regulatory bodies, or professional organizations to acquire additional skills and knowledge relevant to banking."
+             ], 
+             "Exams and Competitions" : [
+                 "While there are no universal exams required for a career in banking, certain certifications and licenses can enhance your qualifications.",
+                 "These include the Certified Financial Plan (CFP), Chartered Financial Analyst (CFA), Certified Bank Auditor (CBA) and various securities licensing exams such as Series 6, 7, 63, and 65. Completing relevant banking and finance courses can also provide valuable knowledge and skills."   
+        ]
+    },
+    
+    "Business Analyst": {
+        "desc": "Business Analysts are professionals who identify business needs, analyze processes, gather requirements, and recommend solutions to help organizations achieve their objectives.The scope for business analysts includes opportunities in various industries such as IT, finance, healthcare, retail, and consulting.",
+        "stream": "Commerce",
+        "salary": 850000,
+        "path": [
+            "Pursue a Bachelor's degree in Business Administration, Management Information Systems (MIS), Computer Science, Economics, or a related field from a reputable university.",
+            "Focus on courses covering business analysis principles, data analysis, project management, business process modeling, and communication skills.",
+             
+             "Internships and Practical Experience:Seek internships or entry-level positions in business analysis, project management, or consulting firms to gain practical experience and exposure to real-world projects.",
+             "Develop proficiency in data analysis tools such as Microsoft Excel, SQL, Tableau, or Power BI to analyze and visualize data for decision-making purposes."
+        ],        
+             "Certifications" : [
+                 "Consider obtaining certifications such as Certified Business Analysis Professional (CBAP), Entry Certificate in Business Analysis (ECBA), or Agile Analysis Certification (IIBA-AAC) to enhance your credibility and marketability as a business analyst."
+             ],    
+             "Exams and Competitions" : [
+                 "For the Entry Certificate in Business Analysis (ECBA) certification, you'll need to pass the ECBA exam, which assesses foundational knowledge and understanding of business analysis concepts.",
+             "Other relevant exams include the Agile Analysis Certification (IIBA-AAC) exam for professionals specializing in Agile methodologies."    
+        ]
+    },
+    
+    "Business Management": {
+        "desc": "Business Management involves planning, organizing, leading, and controlling resources to achieve organizational goals effectively. The scope for business managers includes opportunities in various industries such as marketing, finance, human resources, operations, and entrepreneurship.",
+        "stream": "Commerce",
+        "salary": 775000,
+        "path": [
+            "Pursue a Bachelor's degree in Business Administration (BBA), Management, Economics, or a related field from a reputable university.",
+            "Focus on courses covering business management principles, organizational behavior, marketing, finance, strategic management, and leadership.",
+             
+             "Internships and Practical Experience:Seek internships or entry-level positions in companies across different sectors to gain practical experience and exposure to various aspects of business operations.",
+
+             "Graduate Studies and Advanced Education: Consider pursuing a Master's degree in Business Administration (MBA) or a specialized master's program in areas such as finance, marketing, operations, or entrepreneurship to deepen your knowledge and advance your career in business management."
+        ],    
+             "Certifications": [
+                 "Consider obtaining certifications such as Project Management Professional (PMP), Certified ScrumMaster (CSM), or Six Sigma Green Belt to enhance your management skills and marketability."
+             ], 
+             "Exams and Competitions" : [
+                 "Prepare for exams such as the PMP exam administered by the Project Management Institute (PMI) for certification as a project manager, or the Six Sigma certification exams offered by organizations like ASQ or IASSC for proficiency in process improvement methodologies."    
+        ]
+    },
+    "Chartered Accountant": {
+        "desc": "Chartered Accountants (CAs) are professionals specialized in accounting, auditing, taxation, and financial management. The scope for CAs includes opportunities in public accounting firms, corporate finance departments, government agencies, consulting firms, and academia.",
+        "stream": "Commerce",
+        "salary": 1200000,
+        "path": [
+            "Enroll in a recognized Chartered Accountancy (CA) program offered by a professional accounting body or institute accredited by the Institute of Chartered Accountants of your country (e.g., ICAI in India).",           
+             "Internships and Practical Experience:Undergo mandatory articleship training, which involves practical work experience under the supervision of a practicing Chartered Accountant.",
+             "Gain hands-on experience in accounting, auditing, taxation, and financial management during the articleship period, which varies in duration depending on the regulations of the accounting body."
+        ],   
+             "Certifications" : [
+                 "Consider obtaining additional certifications such as Certified Public Accountant (CPA), Chartered Financial Analyst (CFA), or Certified Management Accountant (CMA) to further enhance your credentials and career opportunities."
+             ],
+             "Exams and Competitions" : [
+                 "Prepare for and pass the Final Examination, which is divided into two groups covering advanced topics in accounting, auditing, taxation, financial reporting, strategic management, and information technology."    
+        ]
+    },
+    "Chemist": {
+        "desc": "Chemists are professionals who study the composition, properties, and reactions of substances to develop new products, improve existing processes, and solve scientific problems. The scope for chemists includes opportunities in research laboratories, pharmaceutical companies, chemical manufacturing firms, environmental agencies, government organizations, and academic institutions.",
+        "stream": "Science",
+        "salary": 360000,
+        "path": [
+            "Pursue a Bachelor's degree in Chemistry or a related field from a reputable university or college.",
+            "Focus on courses covering general chemistry, organic chemistry, inorganic chemistry, analytical chemistry, physical chemistry, and laboratory techniques.",   
+             "Internships and Practical Experience:Seek internships or part-time positions in research laboratories, pharmaceutical companies, or chemical industries to gain practical experience in laboratory techniques, data analysis, and scientific research.",
+             "Develop proficiency in laboratory techniques such as titration, chromatography, spectroscopy, and microscopy for chemical analysis and experimentation."
+        ], 
+             "Certifications" : [
+                 "Develop proficiency in laboratory techniques such as titration, chromatography, spectroscopy, and microscopy for chemical analysis and experimentation."
+             ],
+             
+             "Exams and Competitions" : [
+                 "Depending on the country and specific career path, relevant exams may include standardized tests for admission to undergraduate or graduate programs in chemistry.",
+             "Certifications such as Certified Professional Chemist (CPC) or Certified Laboratory Analyst (CLA) may be obtained through professional organizations or industry-specific certification boards"    
+        ]
+    },
+    "Choreographer": {
+        "desc": "Choreographers are professionals who create and design dance sequences, movements, and routines for performances, shows, music videos, films, and stage productions. The scope for choreographers includes opportunities in the entertainment industry, including theaters, dance companies, television shows, music videos, films, cruise ships, theme parks, and educational institutions.",
+        "stream": "Arts",
+        "salary": 300000,
+        "path": [
+            "While formal education is not mandatory, pursuing a Bachelor's degree in Dance, Performing Arts, Fine Arts, or a related field from a reputable institution can provide valuable training and education in dance techniques, styles, history, and performance skills.",
+             
+             "Practical Experience:Gain practical experience by participating in dance performances, competitions, recitals, and showcases to hone your skills as a dancer and choreographer.",
+             "Develop proficiency in various dance styles and techniques, including choreographing movements, creating formations, transitions, and storytelling through dance."
+        ],
+             "Certifications" : [
+                 "Consider pursuing certifications or advanced training programs in choreography, dance education, or production management to enhance your skills and credentials in the field."    
+        ]
+    },
+    
+    "Civil Engineer": {
+        "desc": "Civil Engineers are professionals who design, construct, maintain, and manage infrastructure projects such as buildings, bridges, roads, dams, and water supply systems. The scope for civil engineers includes opportunities in various sectors including construction, infrastructure development, environmental engineering, transportation, and urban planning.",
+        "stream": "Science",
+        "salary": 400000,
+        "path": [
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",
+
+            "Bachelor's Degree:Pursue a Bachelor's degree in Civil Engineering from a reputable university or college accredited by the relevant professional engineering body in your country.",
+            "Focus on courses covering core subjects such as structural engineering, geotechnical engineering, transportation engineering, water resources engineering, construction management, and environmental engineering.",
+             
+             "Internships and Practical Experience:Seek internships or co-op placements with engineering firms, construction companies, government agencies, or consulting firms to gain practical experience and exposure to real-world projects.",
+             "Develop proficiency in engineering software tools such as AutoCAD, Revit, Civil 3D, SAP2000, ETABS, or STAAD.Pro for design, analysis, and modeling of civil engineering structures and systems."
+        ],
+             "Certifications": [
+                "Obtain professional engineering licensure or certification from the relevant engineering regulatory body in your country. This typically involves passing the Fundamentals of Engineering (FE) exam and the Professional Engineering (PE) exam after gaining relevant work experience."
+             ] ,
+             "Exams and Competitions" : [
+                 "Prepare for entrance exams required for admission to engineering programs, such as the Joint Entrance Examination (JEE) in India or the SAT in the United States."    
+        ]
+    },
+    
+    "Civil Services": {
+        "desc": "Civil Services involve working for the government in administrative, diplomatic, law enforcement, and regulatory roles. The scope of civil services includes opportunities to serve in various government departments, agencies, and ministries at local, state, and national levels.",
+        "stream": "any",
+        "salary": 1100000,
+        "path": [
+            "Obtain a Bachelor's degree in any discipline from a recognized university. While there is no specific degree requirement for Civil Services, having a strong educational background is beneficial.",
+                        
+            "Preparing for Civil Services Exams:Civil Services exams are highly competitive and require thorough preparation.Start by understanding the exam pattern, syllabus, and eligibility criteria for the Civil Services Examination (CSE) conducted by the respective country's civil services commission.",
+             
+             "Practical Experience:Develop strong analytical and critical thinking skills to analyze complex issues, policies, and legislation."
+        ] ,   
+             "Certifications": [
+                 "While there are no specific certifications required for Civil Services, candidates may consider participating in training programs, workshops, or leadership development courses to enhance their skills and knowledge in governance, public administration, and policy analysis."
+             ] ,    
+             "Exams and Competitions" : [
+                 "It's the UPSC Civil Services Exam, comprising Preliminary, Main, and Interview stages. In the United States, exams differ by agency, including the Federal Civil Service Exam and Foreign Service Officer Test."    
+        ]
+    },
+    "Company Secretary": {
+        "desc": "Company Secretaries play a pivotal role in ensuring regulatory compliance and governance within companies. They handle legal and corporate matters, facilitate board meetings, ensure compliance with statutory requirements, and advise on corporate governance practices.",
+        "stream": "Commerce",
+        "salary": 700000,
+        "path": [
+            "Pursue a Bachelor's degree in Commerce, Business Administration, Economics, or any related field from a recognized university.",
+            "Complete the Foundation Course offered by the Institute of Company Secretaries of India (ICSI) after 10+2 or its equivalent.",
+                        
+            "Foundation Course:Register for and complete the Foundation Course, which covers basic concepts of business, economics, accounting, and corporate law.",
+             
+             "Practical Experience:Gain hands-on experience in secretarial practices, corporate law compliance, corporate governance, legal documentation, and other related areas."
+        ],  
+             "Certifications" : [
+                 "Upon passing the Final Examination and completing the required practical training, apply for Associate Membership of ICSI.",
+             "Become a certified Company Secretary and gain membership status with the professional body upon approval"
+             ] ,   
+             "Exams and Competitions" : [
+                 "Exams include the Foundation, Executive, and Professional Programme examinations conducted by ICSI or the relevant regulatory body in your country."    
+        ]
+    },
+    "Computer Applications": {
+        "desc": "Computer Applications involve the use of computer software and technology to solve practical problems and enhance productivity in various fields. The scope for computer applications professionals includes opportunities in software development, web development, mobile app development, database management, system analysis, and computer networking.",
+        "stream": "Science",
+        "salary": 600000,
+        "path": [
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",
+                        
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Applications (BCA) or a related field such as Computer Science, Information Technology, or Software Engineering from a recognized university or college.",
+            "Focus on courses covering programming languages, software development methodologies, database management systems, web technologies, and computer networking.",
+             
+             "Internships and Practical Experience:Gain practical experience by working on software development projects, internships, or co-op placements with software companies, IT firms, or research institutions.",
+             "Learn programming languages such as Java, Python, C++, JavaScript, or SQL, depending on the area of interest and career goals."
+        ], 
+             "Certifications" : [
+                 "Consider obtaining professional certifications in specific technologies or platforms relevant to your career interests, such as Oracle Certified Associate (OCA), Microsoft Certified Solutions Developer (MCSD), or AWS Certified Developer Associate."
+             ],  
+            " Exams and Competitions" : [
+                "Prepare for entrance exams required for admission to engineering programs, such as the Joint Entrance Examination (JEE) in India or the SAT in the United States."    
+        ]
+    },
+    
+    "Computer Engineer": {
+        "desc": "Computer Engineering involves the design, development, and maintenance of computer hardware and software systems. The scope for computer engineers includes opportunities in areas such as hardware design, software development, embedded systems, robotics, cybersecurity, and artificial intelligence.",
+        "stream": "Science",
+        "salary": 1200000,
+        "path": [
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",           
+            "Bachelor's Degree : Pursue a Bachelor's degree in Computer Engineering, Computer Science, Electrical Engineering, or a related field from a reputable university or college",
+             
+             "Internships and Practical Experience:Seek internships or co-op placements with technology companies, IT firms, research institutions, or government agencies to gain practical experience and exposure to real-world projects.",
+             "Develop proficiency in programming languages such as C, C++, Java, Python, or JavaScript for software development and system programming."
+        ],
+             "Certifications" : [
+                 "Consider obtaining professional certifications in specific technologies or platforms relevant to your career interests, such as Cisco Certified Network Associate (CCNA), Microsoft Certified Solutions Associate (MCSA), or Certified Information Systems Security Professional (CISSP)."
+             ],
+                "Exams and Competitions" : [
+                    "Prepare for competitive exams like GRE (Graduate Record Examination) or GATE (Graduate Aptitude Test in Engineering) if planning to pursue higher education abroad or in India, respectively."    
+        ]
+    },
+    
+    "Content Writer": {
+        "desc": "Content Writers create written material for various mediums such as websites, blogs, social media, marketing materials, and more. The scope for Content Writers includes opportunities in digital marketing agencies, advertising firms, publishing houses, corporate communications departments, and freelance writing.",
+        "stream": "Arts",
+        "salary": 550000,
+        "path": [
+            "Pursue a Bachelor's degree in English, Journalism, Communications, Marketing, or a related field from a recognized university or college.",
+            "Focus on courses covering writing skills, journalism principles, digital media, marketing communication, and content strategy.",
+                        
+            "Bachelor's Degree:Pursue a Bachelor's degree in English, Journalism, Communications, Marketing, or a related field from a recognized university or college.",
+            "Focus on courses covering writing skills, journalism principles, digital media, marketing communication, and content strategy.",
+            "Develop strong writing skills with a focus on clarity, creativity, and audience engagement."
+        ] ,            
+             "Certifications" : [
+                 "Consider obtaining certifications in content marketing, copywriting, SEO copywriting, or digital marketing to enhance your skills and credibility as a Content Writer.",
+             "Participate in writing workshops, online courses, and industry conferences to learn new techniques, tools, and best practices in content creation and marketing."    
+        ]
+    },
+    "Copywriter": {
+        "desc": "Copywriters are responsible for creating compelling and persuasive content used in advertising, marketing, and promotional materials. The scope for copywriters includes opportunities in advertising agencies, marketing firms, digital media companies, corporate communications departments, and freelance projects.",
+        "stream": "Arts",
+        "salary": 480000,
+        "path": [
+            "Complete your secondary education (SSC) with a focus on language skills, literature, and writing proficiency. Strong command over languages, grammar, and vocabulary is essential for a career in content writing.",
+                        
+            "Bachelor's Degree:Pursue a Bachelor's degree in English, Journalism, Communications, Marketing, Advertising, or a related field from a recognized university or college. Strong writing, research, and communication skills are essential for this career.",
+            "Improve creativity, critical thinking, problem-solving abilities, and attention to detail to develop unique and impactful copy that resonates with consumers and drives desired actions."
+        ] ,   
+             "Certifications" : [
+                 "Consider obtaining certifications in copywriting, content marketing, digital marketing, or advertising from reputable organizations or professional associations to enhance your credibility and skills as a copywriter."    
+        ]
+    },
+    
+    "Customer Service Executive": {
+        "desc": "Customer Service Executives play a crucial role in addressing customer inquiries, resolving issues, and providing assistance to ensure customer satisfaction. The scope for Customer Service Executives includes opportunities in various industries such as retail, hospitality, telecommunications, banking, e-commerce, and healthcare.",
+        "stream": "any",
+        "salary": 290000,
+        "path": [
+            "Complete your secondary education (SSC) with a focus on communication skills, problem-solving abilities, and interpersonal skills.",
+                        
+            "Bachelor's Degree:While a specific degree may not be required, having a diploma or Bachelor's degree in fields such as Business Administration, Communications, Hospitality Management, or related areas can be beneficial.",
+             
+             "Internships and Practical Experience:Seek internships or entry-level positions in customer service roles to gain practical experience and exposure to customer interactions, problem-solving scenarios, and service delivery processes."
+        ],
+             "Certifications" : [
+                 "Enroll in customer service training programs or workshops offered by professional organizations, vocational schools, or online platforms to learn about best practices, communication techniques, and customer handling skills.",
+             "Consider obtaining certifications such as Certified Customer Service Professional (CCSP) or Customer Service Excellence Certification to demonstrate your expertise and commitment to customer service excellence."
+             ],
+             "Exams and Competitions" : [
+                 "Exams required to become a Customer Service Executive typically include any relevant certification exams offered by professional organizations, such as the Certified Customer Service Professional (CCSP) exam"    
+        ]
+    },
+    
+    "Data Scientist": {
+        "desc": "Data Scientists analyze and interpret complex data to inform business decisions, identify trends, and drive strategic initiatives across various industries.The scope for data scientists is broad, with opportunities in finance, healthcare, e-commerce, technology, marketing, and more, as organizations increasingly rely on data-driven insights.",
+        "stream": "Science",
+        "salary": 1200000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics, statistics, computer science, and programming languages such as Python, R, or SQL.",
+                        
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Science, Statistics, Mathematics, Engineering, Economics, or a related field from a recognized university or college.",
+           " Develop proficiency in programming languages commonly used in data science, such as Python, R, or SQL, for data manipulation, analysis, and visualization.",
+             
+             "Internships and Practical Experience:Gain hands-on experience with real-world data science projects, either through internships, co-op placements, research projects, or personal projects.",
+             "Engage with the data science community, share knowledge, collaborate on projects, and participate in data science meetups, conferences, and networking events to expand your network and stay informed about industry trends and opportunities."
+        ],   
+             "Certifications" : [
+                 "Obtain industry-recognized certifications such as IBM Data Science Professional Certificate, Google Data Analytics Professional Certificate, or Microsoft Certified: Azure Data Scientist Associate."
+             ] ,
+             "Exams and Competitions" : [
+                 "Prepare for competitive exams like GRE (Graduate Record Examination) or GATE (Graduate Aptitude Test in Engineering) if planning to pursue higher education abroad or in India, respectively."    
+        ]
+    },
+    
+    "Database Administrator": {
+        "desc": "Database Administrators (DBAs) are responsible for managing, securing, and optimizing databases to ensure efficient data storage, retrieval, and management. The scope for database administrators includes opportunities in various industries such as finance, healthcare, e-commerce, technology, and government, where databases are critical for storing and accessing organizational data.",
+        "stream": "Science",
+        "salary": 800000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics, statistics, computer science, and programming languages such as Python, R, or SQL.",
+                        
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Science, Statistics, Mathematics, Engineering, Economics, or a related field from a recognized university or college.",
+            "Develop proficiency in programming languages commonly used in data science, such as Python, R, or SQL, for data manipulation, analysis, and visualization.",
+             
+             "Internships and Practical Experience:Gain hands-on experience with real-world data science projects, either through internships, co-op placements, research projects, or personal projects."
+        ] ,
+             "Certifications" : [
+                 "Obtain industry-recognized certifications such as Oracle Certified Professional (OCP), Microsoft Certified: Azure Database Administrator Associate, IBM Certified Database Administrator, or AWS Certified Database - Specialty."
+             ],
+             "Exams and Competitions" : [
+                 "Prepare for competitive exams like GRE (Graduate Record Examination) or GATE (Graduate Aptitude Test in Engineering) if planning to pursue higher education abroad or in India, respectively."    
+        ]
+    },
+    
+    "Dental Surgeon": {
+        "desc": "Dentists diagnose, prevent, and treat various dental and oral health issues, including tooth decay, gum disease, and oral infections. The scope for dentists includes opportunities in private practice, hospitals, community health centers, government agencies, and academic institutions.",
+        "stream": "Science",
+        "salary": 450000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on science subjects such as biology, chemistry, and physics.",
+            "Pursue a Bachelor's degree in Pre-Dentistry, Biology, Chemistry, or a related field from a recognized university or college.",
+                        
+            "Dental Admission Test (DAT):Prepare for and take the Dental Admission Test (DAT), which is required for admission to most dental schools. The DAT assesses your academic ability, scientific knowledge, and perceptual ability.",
+            "Excellent communication and interpersonal skills to interact with patients and colleagues effectively."
+        ],    
+            "Certifications":[
+                "Pass the National Board Dental Examination (NBDE) or a state-specific licensing exam to become a licensed dentist. Requirements vary by state, so research the licensing process in your desired location."
+        ] ,   
+            "Exams and Competitions" : [
+                "Exams required to become a dentist include the Dental Admission Test (DAT) for dental school admission, the National Board Dental Examination (NBDE) for licensure, and regional or state-specific licensing exams. Optional specialty board exams are available for dentists pursuing specialization."    
+        ]
+    },
+    "Doctor": {
+        "desc": "Doctors are healthcare professionals responsible for diagnosing, treating, and preventing illnesses, injuries, and medical conditions in patients of all ages. They work in various healthcare settings, including hospitals, clinics, private practices, and community health centers, and may specialize in areas such as internal medicine, surgery, pediatrics, obstetrics and gynecology, psychiatry, or family medicine.",
+        "stream": "Science",
+        "salary": 1800000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on science subjects such as biology, chemistry, and physics.",
+            "Pursue a Bachelor's degree in Pre-Medical Studies, Biology, Chemistry, or a related field from a recognized university or college.",
+                        
+            "Medical College Admission Test (MCAT): Prepare for and take the Medical College Admission Test (MCAT), which is required for admission to medical school. The MCAT assesses knowledge in biological and physical sciences, critical thinking, and problem-solving skills."
+        ],    
+        "Certifications":[     
+            "Pass the United States Medical Licensing Examination (USMLE) for MD graduates or the Comprehensive Osteopathic Medical Licensing Examination (COMLEX-USA) for DO graduates. These exams assess medical knowledge and clinical skills."
+        ], 
+            "Exams and Competitions" : [
+                "Candidates must first pass the Medical College Admission Test (MCAT) for admission to medical school.Surgeons may pursue board certification through exams administered by organizations like the American Board of Surgery (ABS) and may opt for specialty-specific exams for further specialization."    
+        ]
+    },
+    "Electrical Engineer": {
+        "desc": "Electrical engineers design, develop, and maintain electrical systems, equipment, and devices used in various industries such as power generation, telecommunications, electronics, and manufacturing.",
+        "stream": "Science",
+        "salary": 450000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics and physics.",
+            "Pursue a Bachelor's degree in Electrical Engineering or a related field from an accredited university or college.",
+                        
+            "Internships and Co-op Programs: Gain practical experience through internships or co-op programs with engineering firms, electrical utilities, or manufacturing companies. Internships provide hands-on experience and networking opportunities."
+        ],    
+        "Certifications":[     
+            "Obtain a Professional Engineer (PE) license to practice as an electrical engineer. Licensure requirements vary by state but typically include completing a bachelor's degree, gaining relevant work experience, and passing the Fundamentals of Engineering (FE) exam and the Principles and Practice of Engineering (PE) exam."
+        ] ,   
+            "Exams and Competitions": [
+                "Fundamentals of Engineering (FE) Exam: The FE exam is the first step toward earning a PE license. It assesses fundamental engineering knowledge and is typically taken during the final year of undergraduate studies.",
+            "Principles and Practice of Engineering (PE) Exam: The PE exam is the second step toward earning a PE license. It assesses engineering knowledge in a specific discipline, such as electrical engineering, and is taken after gaining relevant work experience."    
+        ]
+    },
+    "Electronics Engineer": {
+        "desc": "Electronics engineers design, develop, test, and supervise the manufacture of electronic equipment and systems. They work with a wide range of technologies, including semiconductors, circuits, microprocessors, and telecommunications equipment.",
+        "stream": "Science",
+        "salary": 560000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics and physics.",
+            "Pursue a Bachelor's degree in Electronics Engineering or a related field from an accredited university or college.",
+                        
+            "Internships and Co-op Programs: Gain practical experience through internships or co-op programs with electronics companies, engineering firms, or research institutions. Internships provide hands-on experience and exposure to real-world projects."
+        ],    
+        "Certifications":[     
+            "Pursue certifications in specialized areas such as digital design, embedded systems, or telecommunications to enhance your credentials and career prospects.",
+            "Relevant certifications may be offered by professional organizations or industry associations."
+        ],          
+            "Exams and Competitions" : [
+                "While specific exams may vary depending on location and industry, relevant exams for electronics engineers may include professional engineering (PE) exams for licensure or industry-specific certification exams."    
+        ]
+    },
+    "Event Management": {
+        "desc": "Event managers plan, organize, and execute various types of events, including conferences, weddings, concerts, corporate meetings, and festivals. They coordinate all aspects of an event, including budgeting, scheduling, venue selection, vendor management, marketing, and on-site coordination.",
+        "stream": "any",
+        "salary": 820000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on subjects such as business studies, communication, marketing, and hospitality management.",
+            "While a formal degree is not always required, pursuing a Bachelor's degree in Event Management, Hospitality Management, Business Administration, or Marketing can provide valuable knowledge and skills.",
+                        
+            "Internships and Co-op Programs: Gain practical experience through internships or entry-level positions with event planning companies, hospitality businesses, or event venues. Internships provide valuable hands-on experience and networking opportunities in the industry."
+        ],    
+        "Certifications":[     
+            "Consider pursuing certifications such as Certified Meeting Professional (CMP) or Certified Special Events Professional (CSEP) to enhance your credentials and demonstrate expertise in event management."
+        ], 
+            "Exams and Competitions" : [
+            "While there are no specific exams required to become an event manager, certifications such as CMP or CSEP may require passing an exam to obtain certification."    
+        ]
+    },
+    "Fashion Designer": {
+        "desc": "Fashion designers create clothing, accessories, and footwear, following trends, styles, and consumer preferences. They conceptualize designs, sketch ideas, select fabrics, and oversee the production process.",
+        "stream": "Arts",
+        "salary": 500000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on art, design, and textiles.",
+            "Pursue a Bachelor's degree in Fashion Design or a related field from a reputable design school or university.",
+                        
+            "Internships and Co-op Programs:Gain practical experience through internships with fashion houses, design studios, or clothing manufacturers. Internships provide valuable industry exposure, networking opportunities, and hands-on experience in the design process."
+        ],   
+            "Certifications" : [
+                "While not always required, certifications such as Certified Fashion Designer (CFD) or Certified Apparel Production Professional (CAPP) can enhance credibility and demonstrate expertise in fashion design.Professional Licensure:Consider pursuing certifications such as Certified Meeting Professional (CMP) or Certified Special Events Professional (CSEP) to enhance your credentials and demonstrate expertise in event management."
+            ] ,  
+            "Exams and Competitions" : [
+                "While there are no specific exams required to become an event manager, certifications such as CMP or CSEP may require passing an exam to obtain certification."    
+        ]
+    },
+    "Finance Consultant": {
+        "desc": "Finance consultants provide financial advice and guidance to individuals, businesses, and organizations to help them make informed financial decisions, manage risks, and achieve their financial goals. They analyze financial data, develop strategies, and recommend solutions to improve financial performance",
+        "stream": "Commerce",
+        "salary": 860000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on mathematics, economics, and accounting.",
+            "Pursue a Bachelor's degree in Finance, Accounting, Economics, Business Administration, or a related field from a reputable university or college.",
+                        
+            "Internships and Co-op Programs:Gain practical experience through internships or entry-level positions with financial consulting firms, accounting firms, investment banks, or corporate finance departments."
+        ],     
+            "Certifications" : [
+                "Consider pursuing professional certifications such as Chartered Financial Analyst (CFA), Certified Financial Planner (CFP), or Chartered Financial Consultant (ChFC) to enhance your credentials and demonstrate expertise in finance consulting."
+            ], 
+            "Exams and Competitions" : [
+                "Relevant exams for finance consultants may include professional certification exams such as the CFA exam, CFP exam, or ChFC exam."    
+        ]
+    },
+    "Geologist": {
+        "desc": "Geologists study the Earth's materials, processes, and history to understand its structure, composition, and natural resources. They investigate geological phenomena such as earthquakes, volcanoes, landslides, and mineral deposits.",
+        "stream": "Science",
+        "salary": 700000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on science subjects such as geology, physics, chemistry, and mathematics.",
+            " Pursue a Bachelor's degree in Geology, Earth Sciences, or a related field from an accredited university or college.",
+                        
+            "Internships and Co-op Programs:Coursework may include geology principles, mineralogy, petrology, structural geology, sedimentology, hydrogeology, and geological mapping.Gain proficiency in fieldwork techniques, laboratory analysis, and geospatial technologies."
+        ] , 
+            "Certifications" : [
+                "Obtain licensure as a Professional Geologist (PG) if required for your desired career path or state regulations. Licensure requirements vary by state but may include completing a certain level of education, gaining relevant work experience, and passing a licensure exam."
+            ],
+            "Exams and Competitions" : [
+                "Geologists typically need to pass licensure exams to become Professional Geologists (PG), which vary by state or country. Additionally, optional certification exams may be available for specialized areas like environmental or petroleum geology."    
+        ]
+    },
+    "Graphics Designer": {
+        "desc": "Graphics designers create visual concepts using computer software or by hand to communicate ideas that inspire, inform, or captivate consumers. They develop the overall layout and production design for various applications such as advertisements, brochures, magazines, and corporate reports.",
+        "stream": "Arts",
+        "salary": 420000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on art, design, and computer science.",
+            "Pursue a Bachelor's degree in Graphics Design, Visual Communication Design, Fine Arts, or a related field from an accredited university or college.",
+                        
+            "Internships and Co-op Programs:Gain practical experience through internships with design agencies, advertising firms, publishing houses, or in-house design departments.",
+            "Develop proficiency in design software such as Adobe Photoshop, Illustrator, InDesign, and other relevant tools."
+        ] , 
+            "Certifications" : [
+                "Join professional organizations such as the American Institute of Graphic Arts (AIGA) or Graphic Artists Guild (GAG) to connect with industry professionals, access resources, and stay updated on industry trends."
+            ], 
+            "Exams and Competitions" : [
+                "Graphic designers may choose to pursue certifications in specific software or design techniques, such as Adobe Certified Expert (ACE) exams for Adobe software like Photoshop or Illustrator. "    
+        ]
+    },
+    "Hardware Engineer": {
+        "desc": "Hardware engineers design, develop, and test electronic components, devices, and systems, including computer hardware, circuit boards, and semiconductor chips. They work on the design, manufacturing, and testing phases of hardware products.",
+        "stream": "Science",
+        "salary": 550000,
+        "path": [
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",
+            
+           " Bachelor's Degree:Pursue a Bachelor's degree in Electrical Engineering, Computer Engineering, or a related field from an accredited university or college.",
+                        
+            "Internships and Co-op Programs:Gain practical experience through internships or co-op programs with hardware companies, semiconductor manufacturers, or engineering firms."
+        ], 
+            "Certifications" : [
+                "Consider pursuing certifications such as Certified Hardware Engineer (CHE) or Certified Professional Engineer (PE) to enhance your credentials and demonstrate expertise in hardware engineering."
+            ],
+            "Exams and Competitions" : [
+                "Some may choose to pursue professional certifications like Certified Hardware Engineer (CHE) or Certified Professional Engineer (PE) to enhance their credentials."    
+        ]
+    },
+    "Helpdesk Engineer": {
+        "desc": "Helpdesk engineers provide technical support to users and organizations, assisting with troubleshooting, diagnosing, and resolving hardware, software, and network issues. They may work in-house or for IT support companies.",
+        "stream": "Science",
+        "salary": 420000,
+        "path": [
+            "Choose the Science stream in Higher Secondary (HSC) education with subjects like Mathematics, Physics, and Computer Science.",           
+            "Bachelor's Degree:Pursue a diploma or Bachelor's degree in Computer Science, Information Technology, or a related field from a recognized institution.",
+            "Internships and Co-op Programs:Gain practical experience through internships or entry-level positions in IT support roles."
+        ],
+        "Certifications":[
+            "Consider obtaining certifications such as CompTIA A+, CompTIA Network+, or Microsoft Certified: Modern Desktop Administrator Associate to enhance your credentials."
+        ],            
+        "Exams and Competitions":[
+            "Relevant exams include certification exams such as CompTIA A+, CompTIA Network+, and Microsoft Certified: Modern Desktop Administrator Associate."    
+        ]
+    },
+    "Historian": {
+        "desc": "Historians study and interpret historical events, trends, and cultures through research, analysis, and documentation. They work in various settings, including academia, museums, archives, libraries, government agencies, and research institutions.",
+        "stream": "Arts",
+        "salary": 500000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on history, social studies, and humanities.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in History or a related field from an accredited university or college.",
+            "Internships and Co-op Programs:Gain practical experience through internships, volunteer work, or entry-level positions in historical societies, museums, archives, or research projects."
+        ],
+        "Certifications":[
+            "Publish articles, papers, or books in scholarly journals, magazines, or other publications to contribute to the field of history and establish your expertise."
+        ],            
+        "Exams and Competitions":[
+            "There are no specific exams required to become a historian. However, proficiency in research methods, historical analysis, and writing skills are essential for success in the field."    
+        ]
+    },
+    "Information Security Specialist": {
+        "desc": "Information security specialists are responsible for protecting computer systems, networks, and data from cybersecurity threats such as hacking, malware, and unauthorized access. They assess security risks, implement protective measures, and respond to security incidents.",
+        "stream": "Science",
+        "salary": 1150000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on mathematics, computer science, and information technology.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Science, Information Security, Cybersecurity, or a related field from an accredited university or college.",
+            "Internships and Co-op Programs:Gain practical experience through internships, entry-level positions, or cybersecurity-related projects."
+        ],
+        "Certifications":[
+            "Obtain industry-recognized certifications such as CompTIA Security+, Certified Information Systems Security Professional (CISSP), Certified Ethical Hacker (CEH), or Certified Information Security Manager (CISM) to enhance your credentials."
+        ],            
+        "Exams and Competitions":[
+            "Information security specialists typically pursue certifications to validate their expertise. Common certifications include CompTIA Security+, like Certified Information Systems Security Professional (CISSP) or Certified Ethical Hacker (CEH), which demonstrate proficiency in various aspects of information security"    
+        ]
+    },
+    "Information Technology": {
+        "desc": "Information Technology encompasses the design, development, implementation, and maintenance of computer systems, networks, software applications, and IT infrastructure to support organizational objectives.",
+        "stream": "Science",
+        "salary": 880000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on mathematics, computer science, and science subjects.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Information Technology, Computer Science, Computer Engineering, or a related field from an accredited university or college.",
+            "Internships and Co-op Programs:Gain practical experience through internships, co-op programs, or entry-level positions in IT departments, technology companies, or consulting firms."
+        ],
+        "Certifications":[
+            "Obtain industry-recognized certifications such as CompTIA A+, CompTIA Network+, Microsoft Certified: Azure Administrator Associate, Cisco Certified Network Associate (CCNA), or ITIL Foundation to validate your skills and enhance your credentials."
+        ],            
+        "Exams and Competitions":[
+            "Information technology professionals typically pursue industry-recognized certifications to validate their skills and enhance their credentials. Common certifications include CompTIA A+ for foundational IT knowledge, CompTIA Network+ for networking fundamentals."    
+        ]
+    },
+    "Journalist": {
+        "desc": "Journalists gather, investigate, analyze, and report news and information to the public through various mediums such as print, broadcast, online, or multimedia platforms. They cover a wide range of topics including politics, current events, sports, entertainment, and more.",
+        "stream": "Arts",
+        "salary": 520000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on English, literature, communication, and social sciences.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Journalism, Mass Communication, or a related field from a recognized university or college.",
+            "Internships and Co-op Programs:Gain practical experience through internships with newspapers, magazines, online media outlets, or broadcast stations."
+        ],
+        "Certifications":[
+            "There are no specific certifications required to become a journalist. However, obtaining certifications in areas such as media law or digital journalism may enhance your skills and credibility in the field"
+        ],            
+        "Exams and Competitions":[
+            "There are no specific exams required to become a journalist. However, obtaining certifications in areas such as media law or digital journalism may enhance your skills and credibility in the field"    
+        ]
+    },
+    "Lawyer": {
+        "desc": "Lawyers provide legal advice and representation to individuals, businesses, and organizations in various legal matters. They may work in private practice, government agencies, corporations, or non-profit organizations.",
+        "stream": "any",
+        "salary": 740000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on subjects such as English, history, economics, and political science.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Law (LLB) from a recognized university or college. Alternatively, you can pursue an integrated undergraduate degree in law (BA LLB or BBA LLB).",
+            "Internships and Co-op Programs:Gain practical experience through internships with law firms, government agencies, corporate legal departments, or non-profit organizations."
+        ],
+        "Certifications":[
+            "Law school coursework covers various areas of law including constitutional law, criminal law, contract law, tort law, and civil procedure."
+        ],            
+        "Exams and Competitions":[
+            "Depending on the country, entrance exams such as the Common Law Admission Test (CLAT), Law School Admission Test (LSAT), or state-specific law entrance exams may be required for admission to law schools."    
+        ]
+    },
+    "Mathematician": {
+        "desc": "Mathematicians are professionals who study and apply mathematical principles to solve problems in various fields such as science, engineering, finance, and technology. They conduct research, develop theories, and create mathematical models to analyze data and predict outcomes.",
+        "stream": "any",
+        "salary": 500000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics, physics, and computer science.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Mathematics or Applied Mathematics from a recognized university or college.",
+            "Internships and Co-op Programs:Gain practical experience through internships with newspapers, magazines, online media outlets, or broadcast stations."
+        ],
+        "Certifications":[
+            "Coursework typically includes calculus, algebra, discrete mathematics, probability theory, and mathematical analysis."
+        ],            
+        "Exams and Competitions":[
+            "While there are no specific certifications required for mathematicians, obtaining teaching certifications or professional certifications in specialized areas such as data science or financial modeling may enhance career opportunities."    
+        ]
+    },
+    "Mechanical Engineer": {
+        "desc": "Mechanical engineers design, develop, and test mechanical devices, systems, and processes to solve engineering problems and improve efficiency in various industries.",
+        "stream": "Science",
+        "salary": 480000,
+        "path": [
+            "Complete secondary education (SSC) with strong grades in mathematics, physics, chemistry, and computer science.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Mechanical Engineering from an accredited university or college.",
+            "Internships and Co-op Programs:Gain practical experience through internships or co-op programs with engineering firms, manufacturing companies, or research institutions."
+        ],
+        "Certifications":[
+            "Obtain a Professional Engineer (PE) license by passing the Fundamentals of Engineering (FE) exam and the Principles and Practice of Engineering (PE) exam after gaining relevant work experience."
+        ],            
+        "Exams and Competitions":[
+            "Consider taking exams such as the Fundamentals of Engineering (FE) exam or the Mechanical Engineering Professional Engineer (PE) exam to become licensed as a Professional Engineer (PE)."    
+        ]
+    },
+    "Networking Engineer": {
+        "desc": "Networking engineers design, implement, and manage computer networks to ensure efficient communication and data exchange within organizations. They work with various networking technologies such as routers, switches, firewalls, and wireless access points.",
+        "stream": "Science",
+        "salary": 750000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on mathematics, physics, and computer science.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Science, Information Technology, or a related field with a specialization in networking.",
+            "Internships and Co-op Programs:Gain practical experience through internships, part-time jobs, or volunteer opportunities with IT departments, networking companies, or service providers."
+        ],
+        "Certifications":[
+            "Pursue industry-recognized certifications such as Cisco Certified Network Associate (CCNA), CompTIA Network+, or Juniper Networks Certified Internet Associate (JNCIA)."
+        ],            
+        "Exams and Competitions":[
+            "To become a Networking Engineer, you should aim to pass industry-recognized exams such as the Cisco Certified Network Associate (CCNA), CompTIA Network+, or Juniper Networks Certified Internet Associate (JNCIA)."    
+        ]
+    },
+    "Nurse": {
+        "desc": "Nurses play a crucial role in providing healthcare services, working closely with patients, doctors, and other healthcare professionals to promote health, prevent illness, and provide patient care.",
+        "stream": "Science",
+        "salary": 500000,
+        "path": [
+            "Complete secondary education (SSC) with a strong background in science, including biology, chemistry, and anatomy.",           
+            "Bachelor's Degree:Pursue a Bachelor of Science in Nursing (BSN) degree from an accredited nursing program. Alternatively, you can start with an Associate Degree in Nursing (ADN) and later pursue a BSN through a bridge program.",
+            "Internships and Co-op Programs:Gain practical experience through clinical internships and externships in hospitals, clinics, long-term care facilities, and community health centers"
+        ],
+        "Certifications":[
+            "Obtain certifications such as Basic Life Support (BLS), Advanced Cardiac Life Support (ACLS), or Pediatric Advanced Life Support (PALS) to enhance your skills and credentials."
+        ],            
+        "Exams and Competitions":[
+            "To become a nurse, you'll need to pass the National Council Licensure Examination for Registered Nurses (NCLEX-RN) for Bachelor of Science in Nursing (BSN) graduates or the National Council Licensure Examination for Practical Nurses (NCLEX-PN) for Associate Degree in Nursing (ADN) graduates."    
+        ]
+    },
+    "Painter": {
+        "desc": "Painters use various techniques and mediums to create artworks, express ideas, and evoke emotions through visual compositions. They may work in different styles such as realism, abstract, or impressionism.",
+        "stream": "Arts",
+        "salary": 725000,
+        "path": [
+            "While formal education is not always required, completing secondary education (SSC) with a focus on art, including drawing, painting, and art history, can provide a strong foundation.",           
+            "Internships and Co-op Programs:Gain practical experience through internships with newspapers, magazines, online media outlets, or broadcast stations."
+        ],
+        "Certifications":[
+            "Consider enrolling in art classes, workshops, or community college courses to learn fundamental techniques, color theory, composition, and art history."
+        ],            
+        "Exams and Competitions":[
+            "While there are no specific certifications or exams required to become a painter, obtaining recognition or awards in juried art competitions or exhibitions can enhance your credibility and visibility in the art world."    
+        ]
+    },
+    "Palaeontologist": {
+        "desc": "Paleontologists study the history of life on Earth by examining fossils of plants, animals, and other organisms. They analyze fossils to understand evolution, biodiversity, ancient environments, and the processes that shaped Earth's history.",
+        "stream": "Science",
+        "salary": 750000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on biology, geology, chemistry, and mathematics.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Paleontology, Geology, Biology, or a related field from a reputable university.",
+            "Internships and Co-op Programs:Gain hands-on experience through fieldwork expeditions, internships, or volunteer opportunities with research institutions, museums, or paleontological organizations."
+        ],
+        "Certifications":[
+            "While there are no specific certifications required for paleontologists, obtaining fieldwork certifications such as Wilderness First Aid or CPR may be beneficial for fieldwork safety."
+        ],            
+        "Exams and Competitions":[
+            "To become a paleontologist, there are no specific exams required beyond typical academic assessments like SAT or GRE for admission to undergraduate or graduate programs. However, gaining fieldwork certifications such as Wilderness First Aid or CPR may be beneficial for safety during field expeditions."    
+        ]
+    },
+    "Pharmacist": {
+        "desc": "Pharmacists are healthcare professionals who specialize in medication management. They dispense medications, provide patient counseling on medication use, and ensure the safe and effective use of medications.",
+        "stream": "Science",
+        "salary": 830000,
+        "path": [
+            "Complete secondary education (SSC) with a strong background in science subjects such as biology, chemistry, and mathematics.",           
+            "Bachelor's Degree:Pursue a Doctor of Pharmacy (Pharm.D.) degree from an accredited pharmacy school or college.",
+            "Internships and Co-op Programs:Fulfill prerequisites for pharmacy school, which typically include courses in chemistry, biology, physics, mathematics, and humanities."
+        ],
+        "Certifications":[
+            "After completing pharmacy school, pharmacists must pass the North American Pharmacist Licensure Examination (NAPLEX) to obtain licensure to practice pharmacy."
+        ],            
+        "Exams and Competitions":[
+            "To become a pharmacist, you'll need to pass the North American Pharmacist Licensure Examination (NAPLEX) and potentially the Multistate Pharmacy Jurisprudence Examination (MPJE), depending on your state's requirements. "    
+        ]
+    },
+    "Photography": {
+        "desc": "Photographers capture images using cameras to document events, tell stories, convey emotions, or create visual art. They work in various fields such as portrait photography, commercial photography, wedding photography, fashion photography, or photojournalism.",
+        "stream": "any",
+        "salary": 525000,
+        "path": [
+            "While formal education is not always required, completing secondary education (SSC) with a focus on art, design, or photography can provide a strong foundation.",           
+            "Consider enrolling in photography courses or workshops to learn basic techniques, camera operation, composition, lighting, and image editing.",
+            "Internships and Co-op Programs:Practice photography regularly to develop technical skills and artistic vision."
+        ],
+        "Certifications":[
+            "There are no specific certifications required to become a journalist. However, obtaining certifications in areas such as media law or digital journalism may enhance your skills and credibility in the field"
+        ],            
+        "Exams and Competitions":[
+            "Consider obtaining certifications such as Certified Professional Photographer (CPP) from the Professional Photographers of America (PPA) or Adobe Certified Expert (ACE) in Adobe Photoshop or Lightroom."    
+        ]
+    },
+    "Physicist": {
+        "desc": "Physicists study the fundamental principles governing the behavior of matter, energy, space, and time. They conduct research, develop theories, and apply scientific knowledge to various fields such as astrophysics, quantum mechanics, condensed matter physics, and particle physics.",
+        "stream": "Science",
+        "salary": 780000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics, physics, chemistry, and computer science.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Physics or a related field from a reputable university.",
+            "Internships and Co-op Programs:Gain research experience through internships, summer programs, or undergraduate research opportunities with faculty members or research institutions."
+        ],
+        "Certifications":[
+            "While there are no specific certifications required for physicists, obtaining certification in specialized areas such as radiation safety or nuclear physics may be beneficial for certain career paths."
+        ],            
+        "Exams and Competitions":[
+            "Relevant exams may include the Graduate Record Examination (GRE) for admission to graduate programs in physics or related fields."    
+        ]
+    },
+    "Project Manager": {
+        "desc": "Project managers oversee the planning, execution, and completion of projects within organizations. They coordinate resources, manage budgets, mitigate risks, and ensure that projects are delivered on time and within scope.",
+        "stream": "any",
+        "salary": 650000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on subjects such as mathematics, English, and business studies.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Business Administration, Management, Engineering, Information Technology, or a related field from a recognized university.",
+            "Internships and Co-op Programs:Gain proficiency in project management tools and software such as Microsoft Project, Asana, or Trello."
+        ],
+        "Certifications":[
+            "Consider enrolling in project management courses or certification programs such as Project Management Professional (PMP)® or Certified Associate in Project Management (CAPM)® offered by the Project Management Institute (PMI)."
+        ],            
+        "Exams and Competitions":[
+            "In addition to the PMP® and CAPM® certifications, consider pursuing specialized certifications such as Agile Certified Practitioner (ACP)®, PRINCE2®, or Certified ScrumMaster (CSM)® depending on your industry and career goals."    
+        ]
+    },
+    "Public Relations": {
+        "desc": "Public relations (PR) professionals manage the communication between organizations and their target audiences to build and maintain a positive public image. They handle media relations, social media management, event planning, crisis communication, and stakeholder engagement.",
+        "stream": "any",
+        "salary": 555000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on subjects such as English, communication, marketing, and business studies.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Public Relations, Communication, Journalism, Marketing, or a related field from a reputable university.",
+            "Internships and Co-op Programs:Gain practical experience through internships or entry-level positions in PR agencies, corporate communications departments, non-profit organizations, or government agencies."
+        ],
+        "Certifications":[
+            "While there are no specific certifications required for public relations, obtaining certifications such as Accreditation in Public Relations (APR) from PRSA or Social Media Marketing Certification from organizations like Hootsuite or HubSpot can enhance your credentials."
+        ],            
+        "Exams and Competitions":[
+            "To pursue a career in public relations, there are no specific exams required. However, gaining practical experience through internships or entry-level positions is crucial."    
+        ]
+    },
+    "Sculpture": {
+        "desc": "Sculptors create three-dimensional artworks by shaping and carving materials such as wood, stone, metal, clay, or plaster. They may work independently as artists or collaborate on projects with architects, designers, or public art commissions.",
+        "stream": "Arts",
+        "salary": 468000,
+        "path": [
+            "While formal education is not always required, completing secondary education (SSC) with a focus on art, sculpture, or fine arts can provide a strong foundation.",           
+            "Bachelor's Degree:Consider enrolling in a Bachelor of Fine Arts (BFA) or Bachelor of Arts (BA) program with a specialization in sculpture from an accredited art school or university.",
+            "Internships and Co-op Programs:Gain hands-on experience by spending time in sculpture studios, workshops, or artist residencies."
+        ],
+        "Certifications":[
+            "While there are no specific certifications or exams required for sculptors, obtaining recognition or awards from prestigious art institutions or competitions can enhance your credibility and visibility in the art world."
+        ],            
+        "Exams and Competitions":[
+            "There are no specific exams required.However, obtaining certifications in areas may enhance your skills and credibility in the field"    
+        ]
+    },
+    "Singing": {
+        "desc": "Singers use their voices to perform music across various genres such as classical, opera, jazz, pop, rock, or musical theater. They may perform as solo artists, in bands, choirs, or as session vocalists.",
+        "stream": "Arts",
+        "salary": 800000,
+        "path": [
+            "While formal education is not mandatory, completing secondary education (SSC) with a focus on music, vocal training, or performing arts can provide a strong foundation.",           
+            "Bachelor's Degree:Consider enrolling in a Bachelor of Music (BMus) or Bachelor of Arts (BA) in Music program with a specialization in voice or vocal performance from a reputable music school or university.",
+            "Internships and Co-op Programs:Gain performance experience by participating in school or community choirs, musical theater productions, talent shows, open mic nights, or local gigs."
+        ],
+        "Certifications":[
+            "Consider pursuing advanced degrees or certifications in vocal performance, music education, or music therapy to further your expertise and career opportunities."
+        ],            
+        "Exams and Competitions":[
+            "repare for auditions for music schools, conservatories, or vocal competitions by selecting appropriate repertoire and practicing audition techniques"    
+        ]
+    },
+    "Software Developer": {
+        "desc": "Software developers design, develop, and maintain software applications or systems. They analyze user needs, create technical solutions, write code, and test software for functionality and quality.",
+        "stream": "Science",
+        "salary": 855000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics, computer science, and problem-solving.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Science, Software Engineering, or a related field from an accredited university.",
+            "Internships and Co-op Programs:Gain practical experience through internships, co-op programs, or freelance projects to apply theoretical knowledge to real-world scenarios."
+        ],
+        "Certifications":[
+            "While not always required, certifications can demonstrate expertise and enhance job prospects. Consider certifications such as:Oracle Certified Professional (OCP) for Java developers,Microsoft Certified: Azure Developer Associate,AWS Certified Developer - Associate"
+        ],            
+        "Exams and Competitions":[
+            "Relevant exams may include industry-standard coding assessments or technical interviews conducted by potential employers."    
+        ]
+    },
+    "Software Tester": {
+        "desc": "Software testers are responsible for evaluating software applications or systems to ensure they meet quality standards, functionality requirements, and user expectations. They identify defects, report issues, and collaborate with developers to resolve issues before software release.",
+        "stream": "Science",
+        "salary": 725000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on mathematics, computer science, and problem-solving skills.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Computer Science, Information Technology, Software Engineering, or a related field from a recognized university.",
+            "Internships and Co-op Programs:Gain practical experience through internships, co-op programs, or entry-level positions in software testing."
+        ],
+        "Certifications":[
+            "While not always mandatory, certifications can demonstrate expertise and enhance job prospects. Consider certifications such as ISTQB certifications such as Foundation Level or Advanced Level Tester,Certified Agile Tester (CAT) from the International Software Quality Institute (iSQI)"
+        ],            
+        "Exams and Competitions":[
+            "Relevant exams may include industry-standard certification exams or technical interviews conducted by potential employers."    
+        ]
+    },
+    "Stock Broker": {
+        "desc": "Stock brokers, also known as securities, commodities, or financial services sales agents, facilitate the buying and selling of securities (stocks, bonds, mutual funds, etc.) on behalf of clients. They provide investment advice, execute trades, and manage client portfolios.",
+        "stream": "Commerce",
+        "salary": 1100000,
+        "path": [
+            "Complete secondary education (SSC) with a strong foundation in mathematics, economics, and finance.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Finance, Economics, Business Administration, or a related field from a reputable university. Some universities offer specialized programs in finance or investment banking.",
+            "Internships and Co-op Programs:Gain practical experience through internships or entry-level positions at brokerage firms, investment banks, or financial institutions."
+        ],
+        "Certifications":[
+            "Obtain necessary licenses to work as a stock broker. In the United States, this typically involves passing the Series 7 exam administered by the Financial Industry Regulatory Authority (FINRA)."
+        ],            
+        "Exams and Competitions":[
+            "To become a stock broker, you'll need to pass the Series 7 exam administered by FINRA (Financial Industry Regulatory Authority)"    
+        ]
+    },
+    "Teacher": {
+        "desc": "Teachers educate and instruct students in various subjects and grade levels. They create lesson plans, deliver lectures, facilitate discussions, assess student progress, and provide guidance and support to help students learn and grow academically, socially, and emotionally.",
+        "stream": "any",
+        "salary": 800000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on subjects of interest and good academic performance.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Education or a specific subject area (e.g., Mathematics, Science, English, etc.) from an accredited college or university.alism, Mass Communication, or a related field from a recognized university or college.",
+            "Internships and Co-op Programs:Gain hands-on teaching experience through practicum placements or student teaching assignments in schools or educational settings."
+        ],
+        "Certifications":[
+            "Obtain teaching certification or licensure from the relevant state or country's department of education. Requirements vary by location but typically involve completing an approved teacher preparation program and passing exams such as the Praxis series in the United States."
+        ],            
+        "Exams and Competitions":[
+            "Depending on your location and teaching specialization, you may need to pass exams such as the Praxis series, the National Evaluation Series (NES), or state-specific teacher certification exams."    
+        ]
+    },
+    "Technical Designer": {
+        "desc": "Technical designers work in various industries such as fashion, architecture, engineering, or manufacturing. They create detailed technical drawings, blueprints, or schematics that are used to guide the production or construction of products, structures, or systems.",
+        "stream": "Science",
+        "salary": 650000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on mathematics, physics, and technical drawing.",           
+            "Bachelor's Degree:Pursue a relevant Bachelor's degree program such as Industrial Design, Mechanical Engineering, Architecture, or Fashion Design from an accredited institution.",
+            "Internships and Co-op Programs:Gain practical experience through internships, co-op programs, or entry-level positions in industries relevant to your career goals."
+        ],
+        "Certifications":[
+            "Consider certifications such as Autodesk Certified Professional (ACP) for AutoCAD or Certified SolidWorks Associate (CSWA) for SolidWorks."
+        ],            
+        "Exams and Competitions":[
+            "Exams such as Autodesk Certified Professional (ACP), Certified SolidWorks Associate (CSWA), or industry-specific certification exams may be relevant depending on your career path and specialization."    
+        ]
+    },
+    "Technical Writer": {
+        "desc": "Technical writers create documentation and instructional materials that explain complex technical information in a clear and concise manner. They work in various industries such as software development, engineering, healthcare, and manufacturing to produce user manuals, technical guides, online help systems, and other technical documents.",
+        "stream": "any",
+        "salary": 400000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on English, communication, and computer skills.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in English, Technical Writing, Communication, Journalism, or a related field from an accredited college or university.",
+            "Internships and Co-op Programs:Gain practical experience through internships, co-op programs, or entry-level positions in technical writing or related fields."
+        ],
+        "Certifications":[
+            "Consider certifications such as Certified Professional Technical Communicator (CPTC) offered by the Society for Technical Communication (STC) or Technical Writing Certification from the American Medical Writers Association (AMWA)."
+        ],            
+        "Exams and Competitions":[
+            "While there are no specific exams required for technical writers, certifications such as CPTC or Technical Writing Certification can validate your skills and expertise in the field."    
+        ]
+    },
+    "Travel/Tourism Management": {
+        "desc": "Travel/Tourism managers oversee the operations of travel agencies, tour companies, or tourism organizations. They plan and organize travel itineraries, manage bookings, coordinate transportation and accommodations, and provide assistance and support to travelers.",
+        "stream": "any",
+        "salary": 850000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on business, geography, languages, and customer service skills.",           
+            "Bachelor's Degree:Pursue a Bachelor's degree in Travel and Tourism Management, Hospitality Management, Business Administration with a focus on Tourism, or a related field from a recognized institution.",
+            "Internships and Co-op Programs:Gain practical experience through internships, part-time jobs, or volunteer opportunities in travel agencies, tour companies, hotels, airlines, or tourism boards."
+        ],
+        "Certifications":[
+            "Consider certifications such as Certified Travel Associate (CTA) or Certified Travel Counselor (CTC) offered by The Travel Institute or Certified Tourism Ambassador (CTA) offered by the Tourism Ambassador Institute."
+        ],            
+        "Exams and Competitions":[
+            "Depending on your specialization or career path, consider taking exams such as the Certified Travel Associate (CTA) or Certified Travel Counselor (CTC) exams offered by The Travel Institute to validate your knowledge and skills in the travel and tourism industry."    
+        ]
+    },
+    "Web Designer": {
+        "desc": "Web designers are responsible for creating visually appealing and user-friendly websites. They design the layout, graphics, and interactive features of websites, ensuring they meet client requirements and user expectations.",
+        "stream": "Science",
+        "salary": 560000,
+        "path": [
+            "Complete secondary education (SSC) with a focus on computer science, graphic design, or related subjects.",           
+            "Bachelor's Degree:Pursue a formal education in web design or a related field by enrolling in a diploma or degree program from a recognized institution.",
+            "Internships and Co-op Programs:Gain practical experience through internships, freelance projects, or entry-level positions in web design or related fields."
+        ],
+        "Certifications":[
+            "Consider certifications such as Adobe Certified Expert (ACE) in Adobe Photoshop or Illustrator, or Google Developers Certification for Mobile Web Specialist."
+        ],            
+        "Exams and Competitions":[
+            "While there are no specific exams required for web designers, certifications such as Adobe Certified Expert (ACE) or Google Developers Certification can validate your skills and expertise in specific tools or technologies."    
         ]
     }
 }

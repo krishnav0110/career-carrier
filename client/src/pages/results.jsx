@@ -7,6 +7,7 @@ import Career from "../components/resultCareer";
 import careerPaths from "../data/careerPaths.json";
 import { Context } from "../context/Context";
 import ResultGraph from "../components/resultGraph";
+import rocketLogo from "../images/rocket.svg";
 
 export default function Results(props) {
   const { user } = useContext(Context);
@@ -14,18 +15,23 @@ export default function Results(props) {
   const { state } = useLocation();
   const [filter, setFilter] = useState("");
   const [filterClicked, setFilterClicked] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchResults  = async () => {
-      const res = await axios.post("http://localhost:5001/api/predict/", {data: state});
-      const data = res.data;
-      data.map((career) => {
-        career['salary'] = careerPaths[career.name].salary;
-        career['desc'] = careerPaths[career.name].desc;
-        return career;
-      });
-      setCareers(data);
-      setFilter("");
+      try {
+        setLoading(true);
+        const res = await axios.post("http://localhost:5001/api/predict/", {data: state});
+        const data = res.data;
+        data.map((career) => {
+          career['salary'] = careerPaths[career.name].salary;
+          career['desc'] = careerPaths[career.name].desc;
+          return career;
+        });
+        setCareers(data);
+        setFilter("");
+        setLoading(false);
+      } catch (err) {}
     }
     fetchResults();
   }, [state]);
@@ -33,7 +39,7 @@ export default function Results(props) {
   return (
     <>
       <Navbar />
-      <ResultGraph careers={careers} />
+      {!loading ? (<ResultGraph careers={careers} />) : (<></>)}
       <div className="div">
         <div className="div-10">
           <div className="div-11">
@@ -60,39 +66,46 @@ export default function Results(props) {
                   </div>
                 </div>
                 <div className="div-16">
-                  <div className="div-17">
-                    {filter === "Recommended" ? (
-                      careers.sort((a, b) => {return b.rate - a.rate}).map((career) => (
-                        <Career career={career} />
-                      ))
-                    ) : (filter === "Salary" ? (
-                      careers.sort((a, b) => {return b.salary - a.salary}).map((career) => (
-                        <Career career={career} />
-                      ))
-                    ) : (filter === "Qualification" ? (
-                      careers.filter(career => {
-                        if(user.qualification === "12" || user.qualification === "UG") {
-                          const requiredStream = careerPaths[career.name].stream;
-                          console.log(user.qualification+":"+requiredStream);
-                          if(requiredStream === "any") {
-                            return true;
-                          } else if(user.stream === requiredStream) {
-                            return true;
+                  {loading ? (
+                    <div className="loading-results">
+                      <img src={rocketLogo} alt="" className="loading-rocket" />
+                      <div className="loading-text">Fetching results ...</div>
+                    </div>
+                  ) : (
+                    <div className="div-17">
+                      {filter === "Recommended" ? (
+                        careers.sort((a, b) => {return b.rate - a.rate}).map((career) => (
+                          <Career career={career} />
+                        ))
+                      ) : (filter === "Salary" ? (
+                        careers.sort((a, b) => {return b.salary - a.salary}).map((career) => (
+                          <Career career={career} />
+                        ))
+                      ) : (filter === "Qualification" ? (
+                        careers.filter(career => {
+                          if(user.qualification === "12" || user.qualification === "UG") {
+                            const requiredStream = careerPaths[career.name].stream;
+                            console.log(user.qualification+":"+requiredStream);
+                            if(requiredStream === "any") {
+                              return true;
+                            } else if(user.stream === requiredStream) {
+                              return true;
+                            } else {
+                              return false;
+                            }
                           } else {
-                            return false;
+                            return true;
                           }
-                        } else {
-                          return true;
-                        }
-                      }).map(career => (
-                        <Career career={career} />
-                      ))
-                    ) : (
-                      careers.map((career) => (
-                        <Career career={career} />
-                      ))
-                    )))}
-                  </div>
+                        }).map(career => (
+                          <Career career={career} />
+                        ))
+                      ) : (
+                        careers.map((career) => (
+                          <Career career={career} />
+                        ))
+                      )))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -100,6 +113,23 @@ export default function Results(props) {
         </div>
       </div>
       <style jsx>{`
+        .loading-results {
+          display: flex;
+          flex-direction: column;
+          padding: 50px 0;
+          align-items: center;
+          pointer-events: none;
+        }
+        .loading-rocket {
+          width: 200px;
+          border-radius: 200px;
+          border: 10px solid #174893;
+        }
+        .loading-text {
+          margin: 10px 0;
+          color: #696969;
+          font-size: 18px;
+        }
         .choose-filter {
           margin: 10px 30px 0;
           position: relative;
